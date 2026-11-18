@@ -1,0 +1,10 @@
+{
+  "identityName": "example-publisher.SchoolVaultCompanion",
+  "publisher": "CN=00000000-0000-0000-0000-000000000000",
+  "publisherDisplayName": "example-publisher",
+  "packageFamilyName": "example-publisher.SchoolVaultCompanion_0000000000000",
+  "productId": "9N0000000000",
+  "sourceUrl": "https://partner-center.example.com/products/9N0000000000/identity",
+  "verifiedDate": "2026-10-01",
+  "published": false
+}

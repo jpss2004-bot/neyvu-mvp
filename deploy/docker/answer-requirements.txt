@@ -1,0 +1,7 @@
+# Answer worker runtime. Core logic is stdlib; these cover the hosted provider and PDF/maths helpers.
+# Pin exact versions (and hashes) before a production build.
+anthropic>=0.70
+pypdf>=5.0
+sympy>=1.13
+pillow>=11.0
+numpy>=2.0

@@ -1,0 +1,2 @@
+Citation formatting uses citeproc-js 2.4.63, Copyright Frank Bennett, unmodified, under CPAL-1.0. Source: citeproc-2.4.63.js in this directory. Source and licence: https://github.com/Juris-M/citeproc-js
+Styles and locale data: Citation Style Language project, https://citationstyles.org/, CC BY-SA 3.0. Original author/contributor metadata is retained in the accompanying files. See https://github.com/citation-style-language/styles and https://github.com/citation-style-language/locales.

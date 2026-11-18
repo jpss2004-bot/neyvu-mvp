@@ -1,0 +1,19 @@
+/* Shared Neyvu hierarchy. Product demonstrations use the product's light palette. */
+.nu-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:28px}
+.nu-heading h1{font-size:clamp(28px,3vw,34px);font-weight:650;letter-spacing:-.035em;line-height:1.15;margin:0 0 10px}
+.nu-heading p{color:var(--beta-muted,#52657a);font-size:16px;line-height:1.6;max-width:57ch;margin:0}
+.nu-heading-tools{display:flex;gap:12px;align-items:center;flex-wrap:wrap;flex-shrink:0}
+.nu-course{display:inline-flex;align-items:center;gap:8px;min-width:0;max-width:100%;font-size:13px;font-weight:600;line-height:1.5;color:var(--beta-muted,#52657a)}
+.nu-course-label,.nu-course-detail{min-width:0;overflow-wrap:anywhere}
+.nu-course-detail{font-weight:400}
+.nu-course-mark{height:16px;width:3px;background:var(--beta-accent,#305fcf);border-radius:1px;flex:none}
+.nu-evidence-label{display:flex;align-items:center;gap:9px;font-weight:600;font-size:14px;color:var(--beta-ink,#182b43)}
+@media(max-width:700px){.nu-heading{flex-direction:column;gap:16px;margin-bottom:22px}.nu-heading-tools{width:100%;flex-shrink:1}.nu-heading h1{font-size:28px}}
+
+/* B6 "Why this answer" panel */
+.nu-answer-trace{flex-basis:100%;margin-top:.5rem;padding:.75rem 1rem;border:1px solid var(--nu-border,rgba(127,127,127,.3));border-radius:8px;font-size:.875rem;line-height:1.45}
+.nu-answer-trace dl{display:grid;grid-template-columns:max-content 1fr;gap:.25rem .75rem;margin:0 0 .5rem}
+.nu-answer-trace dt{opacity:.7}
+.nu-answer-trace h4{margin:.5rem 0 .25rem;font-size:.875rem}
+.nu-answer-trace ol,.nu-answer-trace ul{margin:0;padding-left:1.25rem}
+.nu-answer-trace-timing{opacity:.7;margin:.5rem 0 0}

@@ -1,0 +1,98 @@
+/* Selected calendar direction: month context beside an equally useful day workspace. */
+.beta-app .beta-calendar{min-width:0}
+.beta-app .beta-main[data-view=calendar] main{padding-top:20px}
+.beta-app .beta-main[data-view=calendar] .beta-demo-banner{padding:0;margin:0 0 18px;min-height:0;border:0;background:transparent}
+.beta-app .beta-main[data-view=calendar] .beta-demo-banner strong{font-size:12px;font-weight:500}
+.beta-app .beta-main[data-view=calendar] .beta-demo-banner span{display:none}
+.beta-app .beta-main[data-view=calendar] .beta-demo-banner button{min-height:28px;padding:3px 7px;font-size:11px}
+.beta-app .beta-calendar>.nu-heading{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;margin:0;padding:0;border:0}
+.beta-app .beta-calendar>.nu-heading h1{font-size:25px;margin:0}
+.beta-app .beta-calendar>.nu-heading p{font-size:13px;margin:6px 0 0}
+.beta-app .beta-calendar-toolbar{margin:8px 0 18px;gap:12px}
+.beta-app .beta-calendar-toolbar .beta-month-title{font-size:22px;line-height:1.3;margin:0;flex:1;letter-spacing:-.02em}
+.beta-app .beta-calendar-toolbar .beta-week-controls button{min-height:36px;padding:6px 9px;border-radius:6px}
+.beta-app .beta-calendar-view-label{display:flex;align-items:center;gap:8px;margin:0;font-size:13px;color:var(--beta-muted)}
+.beta-app .beta-calendar-view-label select{min-width:0;width:auto;padding:7px 10px;margin:0;font:inherit;background:var(--beta-surface);color:var(--beta-ink);border:1px solid var(--beta-line);border-radius:6px}
+.beta-app .beta-calendar-toolbar>label:not(.beta-calendar-view-label){display:flex;align-items:center;gap:7px;margin:0;font-size:12px;color:var(--beta-muted)}
+.beta-app .beta-calendar-toolbar>label:not(.beta-calendar-view-label) select{min-width:0;width:170px;max-width:100%;margin:0;padding:7px 9px;font:inherit;background:var(--beta-surface);color:var(--beta-ink);border:1px solid var(--beta-line);border-radius:6px}
+.beta-app .nu-month-workspace{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,1fr);gap:18px;align-items:start;min-width:0}
+.beta-app .nu-month-grid{border:1px solid var(--beta-line);border-radius:8px;overflow:hidden;background:var(--beta-paper);min-width:0}
+.beta-app .nu-month-weekdays,.beta-app .nu-month-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.beta-app .nu-month-weekdays span{text-align:center;padding:12px 2px;font-size:13px;font-weight:600;color:var(--beta-muted)}
+.beta-app .nu-month-day{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:8px;min-width:0;min-height:clamp(64px,calc((100dvh - 240px)/6),120px);width:100%;height:100%;padding:10px 9px;text-align:left;border:0;border-top:1px solid var(--beta-line);border-right:1px solid var(--beta-line);border-radius:0;background:transparent;color:var(--beta-ink);box-shadow:none}
+.beta-app .nu-month-day:nth-child(7n){border-right:0}
+.beta-app .nu-month-day:hover{background:var(--beta-surface)}
+.beta-app .nu-month-day[aria-pressed=true]{background:var(--beta-selected);box-shadow:inset 0 0 0 2px var(--beta-accent)}
+.beta-app .nu-month-day time{font-size:16px;line-height:1.4;font-weight:600;align-self:flex-start}
+.beta-app .nu-month-day[aria-current=date] time{color:var(--beta-accent);text-decoration:underline;text-underline-offset:4px}
+.beta-app .nu-month-day[data-outside]{color:var(--beta-muted);background:var(--beta-surface)}
+.beta-app .nu-month-previews{display:grid;gap:4px;min-width:0;font-size:11px;text-align:left;line-height:1.4}
+.beta-app .nu-month-preview{display:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-left:5px;border-left:3px solid var(--beta-accent)}
+.beta-app .nu-month-preview.beta-event-deadline{border-color:var(--beta-warning-text)}
+.beta-app .nu-month-preview.beta-event-plan{border-color:var(--beta-cyan)}
+.beta-app .nu-month-preview small{font-size:inherit}
+.beta-app .nu-month-count{display:block;font-size:12px;color:var(--beta-muted)}
+.beta-app .nu-month-agenda{border:1px solid var(--beta-line);border-radius:8px;min-width:0;padding:24px;background:var(--beta-surface);height:calc(100dvh - 212px);min-height:450px;max-height:764px;overflow:auto;scrollbar-width:thin;scroll-padding:18px}
+.beta-app .beta-week-calendar .nu-month-agenda .beta-calendar-day-detail{margin:0;padding:0;background:transparent;border:0;border-radius:0}
+.beta-app .beta-week-calendar .nu-month-agenda .beta-calendar-day-detail h2{font-size:24px;line-height:1.3;margin:0 0 18px;display:block}
+.beta-app .nu-month-agenda .beta-calendar-day-detail h2 small{display:inline-block;margin-left:8px}
+.beta-app .nu-month-agenda .beta-calendar-event>button{display:grid;grid-template-columns:88px minmax(0,1fr) 16px;width:100%;gap:12px;padding:15px 0;min-height:70px;align-items:start}
+.beta-app .nu-month-agenda .beta-agenda-time>small{display:block;margin-top:4px;color:var(--beta-muted)}
+.beta-app .nu-month-agenda .beta-agenda-time{font-size:14px;min-width:0;overflow-wrap:anywhere}
+.beta-app .nu-month-agenda .beta-agenda-copy{min-width:0;overflow-wrap:anywhere}
+.beta-app .nu-month-agenda .beta-calendar-event strong{font-size:16px}
+.beta-app .nu-month-agenda .beta-calendar-event .beta-personal-calendar{grid-template-columns:70px minmax(0,1fr);gap:12px}
+.beta-app .nu-month-agenda .nu-calendar-inline-detail{position:relative;margin-top:20px;padding-top:24px;border-top:1px solid var(--beta-line);outline-offset:3px}
+.beta-app .nu-calendar-inline-detail>.nu-course{padding-right:32px}
+.beta-app .nu-calendar-inline-detail h2{font-size:20px;line-height:1.4;margin:12px 0;overflow-wrap:anywhere}
+.beta-app .nu-calendar-inline-detail .beta-calendar-dialog-close{position:absolute;right:-8px;top:14px;min-height:36px;min-width:36px;padding:7px}
+.beta-app .nu-calendar-inline-detail dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 0}
+.beta-app .nu-calendar-inline-detail dt{color:var(--beta-muted);font-size:12px;margin-bottom:5px}
+.beta-app .nu-calendar-inline-detail dd{margin:0;font-size:14px;overflow-wrap:anywhere;line-height:1.5}
+.beta-app .nu-calendar-inline-detail .beta-calendar-dialog-actions{margin:16px 0 0;gap:8px}
+.beta-app .nu-calendar-inline-detail .beta-calendar-dialog-actions button{font-size:13px;min-height:36px;padding:8px 10px;white-space:normal}
+.beta-app .nu-calendar-evidence{margin-top:18px;border-top:1px solid var(--beta-line);padding-top:12px;font-size:13px}
+.beta-app .nu-calendar-evidence summary{cursor:pointer;color:var(--beta-muted);min-height:28px}
+.beta-app .nu-calendar-source-preview{margin:16px 0;font-size:14px;line-height:1.6}
+.beta-app .nu-calendar-source-preview h3{font-size:12px;font-weight:500;color:var(--beta-muted);margin:0 0 7px}
+.beta-app .nu-calendar-source-preview blockquote{margin:0;padding:0;border:0;font-size:14px;line-height:1.65;overflow-wrap:anywhere;white-space:pre-wrap}
+.beta-app .nu-calendar-source-preview p{font-size:13px;color:var(--beta-muted)}
+.beta-app .nu-calendar-management,.beta-app .nu-calendar-undated{border-top:1px solid var(--beta-line);padding:14px 0;margin-top:18px;font-size:14px}
+.beta-app .nu-calendar-management>summary,.beta-app .nu-calendar-undated>summary{cursor:pointer;min-height:30px;font-weight:600}
+.beta-app .nu-calendar-management[open]>summary{margin-bottom:20px}
+.beta-app .nu-calendar-management .nu-heading{display:none}
+@media(min-width:901px) and (max-width:1250px){.beta-app .nu-month-workspace{grid-template-columns:minmax(0,1fr) minmax(280px,1fr);gap:12px}.beta-app .nu-month-preview{display:none}.beta-app .nu-month-count{display:block}.beta-app .nu-month-day{min-height:80px}.beta-app .nu-month-agenda{padding:16px}}
+@media(max-width:900px){.beta-app .nu-month-workspace{grid-template-columns:minmax(0,1fr)}.beta-app .nu-month-agenda{height:auto;min-height:0;max-height:none;overflow:visible}.beta-app .nu-month-day{min-height:70px}.beta-app .nu-month-preview{display:none}.beta-app .nu-month-count{display:block}}
+@media(max-width:700px){.beta-app .beta-calendar-toolbar{display:flex;flex-wrap:wrap;gap:10px}.beta-app .beta-calendar-toolbar .beta-month-title{order:-1;flex-basis:100%;font-size:22px}.beta-app .beta-calendar-view-label{margin-left:auto}.beta-app .nu-month-day{padding:8px 4px;min-height:62px;gap:5px}.beta-app .nu-month-weekdays span{font-size:11px;padding:10px 1px}.beta-app .nu-month-agenda{padding:16px}.beta-app .beta-week-calendar .nu-month-agenda .beta-calendar-day-detail h2{font-size:21px}.beta-app .nu-month-agenda .beta-calendar-event>button{grid-template-columns:60px minmax(0,1fr) 16px;gap:8px}.beta-app .nu-month-agenda .beta-agenda-time{grid-column:1}.beta-app .nu-month-agenda .beta-agenda-copy{grid-column:2}.beta-app .nu-month-agenda .beta-source-action{grid-column:3;grid-row:1}.beta-app .nu-calendar-inline-detail dl{grid-template-columns:1fr}}
+
+/* Calendar focus: the month owns the space until a day is deliberately selected. */
+.beta-app .nu-month-workspace{grid-template-columns:minmax(0,1fr)}
+.beta-app .nu-month-workspace[data-panel-open]{grid-template-columns:minmax(0,1fr) minmax(320px,380px)}
+.beta-app .nu-month-workspace:not([data-panel-open]) .nu-month-preview{display:block}
+.beta-app .nu-month-agenda{padding:20px;height:auto;min-height:0;max-height:calc(100dvh - 190px);animation:nu-calendar-reveal 180ms ease-out both}
+.beta-app .nu-calendar-panel-nav{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:22px;color:var(--beta-muted);font-size:12px}
+.beta-app .nu-calendar-panel-nav button{display:inline-flex;align-items:center;gap:4px;min-height:36px;padding:6px 8px}
+.beta-app .nu-calendar-panel-nav button:last-child{margin-left:auto}
+.beta-app .nu-month-agenda .nu-calendar-inline-detail{margin:0;padding:0;border:0;animation:nu-calendar-reveal 160ms ease-out both}
+.beta-app .nu-calendar-inline-detail .beta-plan-item{padding:0;border:0;background:transparent}
+.beta-app .nu-calendar-inline-detail fieldset{min-width:0}
+.beta-app .nu-calendar-inline-detail label{display:grid;gap:6px;margin:14px 0}
+.beta-app .nu-calendar-inline-detail input,.beta-app .nu-calendar-inline-detail select,.beta-app .nu-calendar-inline-detail textarea{width:100%;min-width:0;box-sizing:border-box}
+.beta-app .nu-calendar-inline-detail textarea{min-height:96px}
+.beta-app .nu-calendar-inline-detail input[type=checkbox]{width:auto}
+.beta-app .nu-calendar-inline-detail form [role=status]{padding:9px 12px;border-left:3px solid var(--beta-cyan);background:var(--beta-selected);animation:nu-calendar-reveal 180ms ease-out}
+.beta-app .nu-month-agenda .beta-calendar-event>button{grid-template-columns:68px minmax(0,1fr) 16px;gap:10px}
+.beta-app .nu-month-agenda .beta-calendar-event strong{font-size:15px}
+.beta-app .nu-month-agenda .beta-agenda-time{font-size:12px}
+.beta-app .nu-calendar-add{margin-top:16px}
+.beta-app .nu-calendar-source-preview summary{cursor:pointer;color:var(--beta-muted);padding:10px 0;font-size:13px}
+.beta-app .nu-calendar-inline-detail .beta-activity-dialog-next{margin:18px 0}
+.beta-app .nu-calendar-inline-detail .beta-activity-dialog-next h3{font-size:12px;color:var(--beta-muted);margin:0 0 6px}
+.beta-app .nu-calendar-inline-detail .beta-activity-dialog-next p{margin:0;font-size:16px;line-height:1.5}
+.beta-app .nu-month-day{transition:background-color 120ms ease,box-shadow 120ms ease}
+@keyframes nu-calendar-reveal{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:1100px){.beta-app .nu-month-workspace[data-panel-open]{grid-template-columns:minmax(0,1fr) minmax(280px,330px)}}
+@media(max-width:900px){.beta-app .nu-month-workspace[data-panel-open]{grid-template-columns:minmax(0,1fr)}.beta-app .nu-month-agenda{max-height:none}.beta-app .nu-month-workspace:not([data-panel-open]) .nu-month-preview{display:none}}
+@media(prefers-reduced-motion:reduce){.beta-app .nu-month-agenda,.beta-app .nu-month-agenda .nu-calendar-inline-detail,.beta-app .nu-calendar-inline-detail form [role=status]{animation:none}.beta-app .nu-month-day{transition:none}}
+.beta-app .nu-calendar-more>summary{color:var(--beta-ink);cursor:pointer;font-size:13px;padding:10px 8px;min-height:36px;box-sizing:border-box}
+.beta-app .nu-calendar-management>summary,.beta-app .nu-calendar-undated>summary{color:var(--beta-ink)}

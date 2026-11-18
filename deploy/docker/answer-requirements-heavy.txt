@@ -1,0 +1,4 @@
+# Optional (INSTALL_HEAVY=1): Docling PDF reading and class speech. Large image; qualify separately.
+docling>=2.0
+faster-whisper>=1.0
+av>=12.0

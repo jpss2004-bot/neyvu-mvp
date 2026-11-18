@@ -1,0 +1,6 @@
+# Answer worker runtime (D8). Guards need sympy; PDF reading needs pypdf;
+# the hosted provider path needs the Anthropic SDK (used only when
+# SCHOOL_BETA_MODEL_PROVIDER=anthropic and ANTHROPIC_API_KEY are set).
+sympy==1.14.0
+pypdf>=5,<7
+anthropic>=0.40,<1

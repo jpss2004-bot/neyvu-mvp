@@ -1,0 +1,9 @@
+{
+  "_note": "Per-institution OAuth client records. Client ids and secrets are never stored here: each entry names the environment variables that hold them. Every origin below is a placeholder until the owner registers a developer key with a partner institution.",
+  "institutions": [
+    {"id": "example-canvas", "name": "Example University (Canvas, placeholder)", "provider": "canvas", "origin": "https://canvas.example.edu", "clientIdEnv": "NEYVU_CANVAS_EXAMPLE_CLIENT_ID", "clientSecretEnv": "NEYVU_CANVAS_EXAMPLE_CLIENT_SECRET"},
+    {"id": "example-brightspace", "name": "Example College (Brightspace, placeholder)", "provider": "brightspace", "origin": "https://learn.example.edu", "lpVersion": "1.46", "leVersion": "1.74", "clientIdEnv": "NEYVU_BRIGHTSPACE_EXAMPLE_CLIENT_ID", "clientSecretEnv": "NEYVU_BRIGHTSPACE_EXAMPLE_CLIENT_SECRET"},
+    {"id": "outlook", "name": "Outlook / Microsoft 365", "provider": "microsoft", "tenant": "organizations", "clientIdEnv": "NEYVU_MICROSOFT_CLIENT_ID", "clientSecretEnv": "NEYVU_MICROSOFT_CLIENT_SECRET"},
+    {"id": "gmail", "name": "Gmail", "provider": "google", "clientIdEnv": "NEYVU_GOOGLE_MAIL_CLIENT_ID", "clientSecretEnv": "NEYVU_GOOGLE_MAIL_CLIENT_SECRET"}
+  ]
+}

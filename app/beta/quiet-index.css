@@ -1,0 +1,187 @@
+/* Owner-selected Quiet Index. Shared surfaces, stable course identity, on-demand detail. */
+.beta-app.nu-study-desk.nu-app-shell{grid-template-columns:200px minmax(0,1fr)}
+.nu-study-desk.nu-app-shell .beta-nav{padding:20px 12px 12px;background:var(--desk-rail);color:var(--desk-rail-ink)}
+.nu-study-desk.nu-app-shell .beta-nav header{padding:0 7px 16px}
+.nu-study-desk.nu-app-shell .beta-nav .beta-wordmark img{width:132px;height:auto}
+.nu-study-desk.nu-app-shell .nu-app-navigation{margin-top:12px}
+.nu-study-desk.nu-app-shell .nu-app-navigation a{min-height:40px;padding:9px 10px;border-radius:5px;gap:11px;color:var(--desk-rail-ink);font-size:14px}
+.nu-study-desk.nu-app-shell .nu-app-navigation a[aria-current]{background:var(--desk-rail-active);color:var(--desk-rail-ink)}
+.nu-study-desk.nu-app-shell .nu-app-navigation a[aria-current]::before{display:none}
+.nu-study-desk.nu-app-shell .nu-app-navigation svg{width:18px;height:18px}
+.nu-study-desk.nu-app-shell .nu-secondary-navigation{margin-top:22px;padding-top:18px;border-color:var(--desk-rail-line)}
+.nu-study-desk.nu-app-shell .nu-secondary-navigation a{color:var(--desk-rail-muted)}
+.nu-study-desk.nu-app-shell .beta-nav footer,.nu-study-desk.nu-app-shell .beta-nav footer span{color:var(--desk-rail-muted);font-size:12px}
+.nu-study-desk.nu-app-shell .beta-history{border-color:var(--desk-rail-line);font-size:12px}
+.nu-study-desk.nu-app-shell .beta-top{height:52px;background:var(--desk-canvas);border-color:var(--desk-rule)}
+.nu-study-desk.nu-app-shell .beta-top-tools>small{font-size:11px}
+.nu-study-desk.nu-app-shell main{padding:26px 32px}
+.nu-study-desk :is(button,select,input,textarea){font-family:var(--desk-font)}
+.nu-study-desk button{border-radius:5px}
+.nu-study-desk .beta-today-planner>.nu-heading{margin-bottom:22px;gap:20px;align-items:flex-start}
+.nu-study-desk .beta-today-planner .nu-heading h1{font-size:30px;line-height:1.15;font-weight:650;letter-spacing:-.035em}
+.nu-study-desk .nu-heading p{font-size:14px;line-height:1.5;margin-top:8px}
+.nu-study-desk .beta-today-tools{gap:8px;justify-content:flex-end}
+.nu-study-desk .beta-today-date{font-size:12px}
+.nu-study-desk .beta-today-tools label{font-size:12px}
+.nu-study-desk .beta-today-tools select{font-size:12px;padding:5px 8px}
+.nu-study-desk .nu-today-ask{margin:0 0 30px}
+.nu-study-desk .nu-desk-composer{display:flex;align-items:center;gap:12px;padding:10px 12px;border:1px solid var(--desk-rule);border-radius:5px;background:var(--desk-surface);box-shadow:none}
+.nu-study-desk .nu-desk-composer textarea{flex:1;min-width:0;min-height:40px;height:40px;padding:9px 2px;font-size:15px;line-height:22px;resize:vertical}
+.nu-study-desk .nu-desk-composer>div{flex:none;gap:10px;flex-wrap:nowrap}
+.nu-study-desk .nu-desk-composer select{max-width:170px;min-height:36px;border:0;background:transparent}
+.nu-study-desk .nu-desk-composer .beta-primary{min-height:36px;padding:8px 12px}
+.nu-study-desk .nu-today-suggestions{font-size:12px;color:var(--desk-muted);margin-top:8px}
+.nu-study-desk .nu-today-suggestions>summary{cursor:pointer;color:var(--desk-muted);width:fit-content;min-height:28px;padding:5px 0}
+.nu-study-desk .nu-continue-work h2{font-size:22px;margin-bottom:6px;font-weight:650;letter-spacing:-.025em}
+.nu-study-desk .nu-continue-caption{margin-bottom:20px}
+.nu-study-desk .nu-continue-work ul{border:0}
+.nu-study-desk .nu-continue-work li{grid-template-columns:74px minmax(0,1fr) auto;gap:18px;align-items:start;padding:20px 0;border-bottom:1px solid var(--desk-rule)}
+.nu-study-desk .nu-work-course{background:var(--course-tint);color:var(--course-ink);align-self:stretch;padding:11px 9px;min-height:64px;font-size:13px;line-height:1.45;font-weight:650;border-radius:3px;overflow-wrap:anywhere}
+.nu-study-desk .nu-continue-copy h3{font-size:18px;line-height:1.35;margin:1px 0 8px;letter-spacing:-.015em}
+.nu-study-desk .nu-continue-copy p{font-size:14px;line-height:1.6;max-width:65ch}
+.nu-study-desk .nu-next-label{font-weight:600}
+.nu-study-desk .nu-work-facts{display:flex;gap:6px 12px;flex-wrap:wrap;margin-top:9px;color:var(--desk-muted);font-size:12px}
+.nu-study-desk .nu-work-facts small{font-size:12px}
+.nu-study-desk .nu-continue-actions{max-width:130px;align-items:flex-end;gap:3px}
+.nu-study-desk .nu-continue-actions button{min-height:34px;font-size:12px;padding:6px 2px}
+.nu-study-desk .nu-continue-actions .beta-primary{min-height:36px;padding:8px 18px;font-size:13px}
+.nu-study-desk .nu-continue-actions button:not(.beta-primary){background:transparent;color:var(--desk-muted);text-decoration:underline;text-underline-offset:3px}
+.nu-study-desk .nu-related-plans{margin-top:10px;font-size:12px;color:var(--desk-muted)}
+.nu-study-desk .nu-related-plans summary{cursor:pointer;color:var(--desk-muted);padding:5px 0}
+.nu-study-desk .nu-related-plans>div{padding:10px 0;border-top:1px solid var(--desk-rule)}
+.nu-study-desk .nu-related-plans p{font-size:13px}
+.nu-study-desk .nu-today-focus{display:block;border-top:1px solid var(--desk-rule);padding-top:12px;margin:24px 0 12px}
+.nu-study-desk .nu-today-focus>summary{font-size:14px;font-weight:600;cursor:pointer;color:var(--desk-ink);padding:7px 0}
+.nu-study-desk .nu-today-focus>summary small{color:var(--desk-muted);font-weight:400;margin-left:8px}
+.nu-study-desk .nu-today-focus[open]>summary{margin-bottom:18px}
+.nu-study-desk .nu-today-focus .beta-day-preview{padding:20px 0 0;border-left:0;border-top:1px solid var(--desk-rule);margin-top:24px}
+.nu-study-desk .nu-today-focus .nu-week-priorities>div:first-child h2{font-size:17px}
+.nu-study-desk .nu-chat-tools>summary{color:var(--desk-muted)}
+.nu-study-desk.nu-app-shell .beta-composer{padding:10px 12px;border-radius:5px;box-shadow:none;border:1px solid var(--desk-rule);background:var(--desk-surface)}
+.nu-study-desk.nu-app-shell .beta-composer:focus-within{box-shadow:none;outline:2px solid var(--desk-action);outline-offset:2px}
+.nu-study-desk .beta-composer textarea{min-height:40px;font-size:15px;line-height:1.6;padding:6px 2px}
+.nu-study-desk.nu-app-shell .beta-send{border-radius:5px;width:36px;height:36px;min-height:36px;padding:8px}
+.nu-study-desk .beta-composer-options select{font-size:12px;background:transparent}
+.nu-study-desk .nu-mode-menu{position:relative;font-size:12px;align-self:center}
+.nu-study-desk .nu-mode-menu>summary{cursor:pointer;padding:8px;color:var(--desk-muted);border-radius:4px}
+.nu-study-desk .nu-mode-menu[open]>label{position:absolute;bottom:100%;left:0;min-width:180px;padding:14px;background:var(--desk-surface);color:var(--desk-ink);border:1px solid var(--desk-rule);border-radius:5px;z-index:7;box-shadow:0 6px 20px #0002;display:grid;gap:8px}
+.nu-study-desk .nu-mode-menu select{width:100%}
+.nu-study-desk .beta-conversation .beta-message-user{background:var(--desk-selection);border-radius:5px;padding:16px 18px}
+.nu-study-desk .beta-message .nu-answer-body{font-size:16px;line-height:1.65;max-width:70ch}
+.nu-study-desk .nu-answer-linked-plan{padding:16px 0;margin:20px 0}
+.nu-study-desk .nu-answer-linked-plan>button{background:transparent;border:0;padding:6px 0;font-weight:600;color:var(--desk-ink)}
+.nu-study-desk .nu-memory-link{font-size:12px;color:var(--desk-muted)}
+.nu-study-desk .nu-desk-context button{border-radius:4px}
+.nu-study-desk .nu-month-grid{border:0;border-radius:0;background:transparent}
+.nu-study-desk .nu-month-day{border-right:0;border-top:1px solid var(--desk-rule);padding:10px 8px;gap:8px;min-height:94px}
+.nu-study-desk .nu-month-day[data-outside]{background:transparent;color:var(--desk-muted)}
+.nu-study-desk .nu-month-day time{font-size:14px;font-weight:500}
+.nu-study-desk .nu-month-weekdays span{text-align:left;padding:12px 8px;font-size:13px;color:var(--desk-ink)}
+.nu-study-desk .nu-month-preview{border-left-color:var(--course-color);border-left-width:3px;padding-left:5px;font-size:12px;line-height:1.45;color:var(--desk-ink)}
+.nu-study-desk .nu-month-preview b{font-size:11px;font-weight:650}
+.nu-study-desk .nu-month-workspace:not([data-panel-open]) .nu-month-preview{white-space:normal;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.nu-study-desk .nu-month-workspace:not([data-panel-open]) .nu-month-count{display:none}
+.nu-study-desk .nu-course-legend{display:flex;flex-wrap:wrap;gap:12px 22px;border-top:1px solid var(--desk-rule);padding:14px 0;font-size:12px}
+.nu-study-desk .nu-course-legend .nu-course{font-size:11px}
+.nu-study-desk .nu-month-agenda{border:1px solid var(--desk-rule);border-radius:5px;background:var(--desk-surface)}
+.nu-study-desk .beta-calendar-toolbar .beta-month-title{font-size:26px;font-weight:650}
+.nu-study-desk .nu-course-mark{background:var(--course-color);border-radius:2px}
+.nu-study-desk .nu-calendar-inline-detail>.nu-course{background:var(--course-tint);color:var(--course-ink);padding:7px 10px;border-radius:3px}
+/* Colour is assigned from the stable visible course code, never array position. */
+.nu-study-desk [data-course-tone="0"]{--course-color:#86a970;--course-tint:#dce8d4;--course-ink:#294124}
+.nu-study-desk [data-course-tone="1"]{--course-color:#c9866e;--course-tint:#f1dbd1;--course-ink:#693c2c}
+.nu-study-desk [data-course-tone="2"]{--course-color:#9294ce;--course-tint:#e1e1f3;--course-ink:#43436d}
+.nu-study-desk [data-course-tone="3"]{--course-color:#6e9cb7;--course-tint:#dce8ef;--course-ink:#25475c}
+.nu-study-desk [data-course-tone="4"]{--course-color:#b19a55;--course-tint:#eee7ce;--course-ink:#5f4f1b}
+.nu-study-desk [data-course-tone="5"]{--course-color:#a78eaf;--course-tint:#eadeec;--course-ink:#5c3f65}
+.nu-study-desk [data-course-tone="6"]{--course-color:#65a89c;--course-tint:#d6eae4;--course-ink:#245349}
+html:not([data-schoolvault-theme="light"]) .nu-study-desk [data-course-tone]{--course-tint:color-mix(in srgb,var(--course-color) 20%,#222421);--course-ink:var(--desk-ink)}
+@media(min-width:901px) and (max-width:1000px){
+ .beta-app.nu-study-desk.nu-app-shell{grid-template-columns:72px minmax(0,1fr)}
+ .nu-study-desk.nu-app-shell .beta-nav{padding:20px 8px}
+ .nu-study-desk.nu-app-shell .beta-nav header{padding:0 7px 16px}
+ .nu-study-desk.nu-app-shell .beta-nav .beta-wordmark{width:30px;overflow:hidden}
+ .nu-study-desk.nu-app-shell .beta-nav .beta-wordmark img{max-width:none;width:132px}
+ .nu-study-desk.nu-app-shell .nu-app-navigation a{justify-content:center;padding:10px}
+ .nu-study-desk.nu-app-shell .nu-app-navigation a>span,.nu-study-desk.nu-app-shell .beta-history,.nu-study-desk.nu-app-shell .beta-nav footer>span{display:none}
+}
+@media(max-width:900px){.beta-app.nu-study-desk.nu-app-shell{grid-template-columns:minmax(0,1fr)}.nu-study-desk.nu-app-shell main{padding:20px}.nu-study-desk .nu-month-day{min-height:82px;padding:8px 5px}.nu-study-desk .nu-month-workspace:not([data-panel-open]) .nu-month-preview{font-size:11px}}
+@media(max-width:600px){
+ .nu-study-desk.nu-app-shell main{padding:18px 14px}
+ .nu-study-desk .nu-heading-tools{width:100%}
+ .nu-study-desk .beta-today-tools{justify-content:space-between}
+ .nu-study-desk .nu-desk-composer{display:block;padding:9px 12px}
+ .nu-study-desk .nu-desk-composer textarea{width:100%;height:50px}
+ .nu-study-desk .nu-desk-composer>div{justify-content:space-between}
+ .nu-study-desk .nu-continue-work li{grid-template-columns:52px minmax(0,1fr);gap:12px}
+ .nu-study-desk .nu-work-course{padding:8px 5px;font-size:11px}
+ .nu-study-desk .nu-continue-actions{grid-column:2;flex-direction:row;flex-wrap:wrap;align-items:center;max-width:none;gap:6px 12px}
+ .nu-study-desk .nu-continue-copy h3{font-size:17px}
+ .nu-study-desk .nu-month-workspace:not([data-panel-open]) .nu-month-preview{display:none}
+ .nu-study-desk .nu-month-workspace:not([data-panel-open]) .nu-month-count{display:block;font-size:11px}
+ .nu-study-desk .nu-month-day{min-height:66px}
+ .nu-study-desk .nu-course-legend{gap:9px 14px}
+ .nu-study-desk .beta-calendar-toolbar .beta-month-title{font-size:24px}
+}
+@media(prefers-reduced-motion:no-preference){html:not([data-neyvu-motion="reduce"]) .nu-study-desk .nu-related-plans[open]>div{animation:nu-workspace-reveal 160ms ease-out}}
+html[data-neyvu-motion="reduce"] .nu-study-desk :is(.nu-month-agenda,.nu-calendar-inline-detail,form [role=status]){animation:none;transition:none}
+.nu-study-desk .beta-today-planner .beta-today-tools{display:grid;grid-template-columns:auto;gap:7px}
+.nu-study-desk .beta-today-planner .beta-today-tools label{display:flex;align-items:center;gap:8px;flex:none}
+.nu-study-desk .beta-today-planner .beta-today-tools select{min-width:0;width:auto;max-width:210px;min-height:30px;padding:4px 7px;background:transparent}
+.nu-study-desk .nu-continue-work ul{margin-top:0;padding-top:0}
+.nu-study-desk .nu-continue-work li:first-child{padding-top:12px}
+
+.nu-study-desk.nu-app-shell .beta-nav .beta-wordmark .nu-rail-symbol{display:none}
+@media(min-width:901px) and (max-width:1000px){.nu-study-desk.nu-app-shell .beta-nav .beta-wordmark .nu-rail-symbol{display:block;width:30px;height:30px}.nu-study-desk.nu-app-shell .beta-nav .beta-wordmark :is(.beta-brand-dark,.beta-brand-light){display:none}}
+/* Calendar is imported by its client component; explicitly outrank its legacy sheet. */
+.beta-app.nu-study-desk.nu-app-shell .nu-month-grid{border:0;border-radius:0;background:transparent}
+.beta-app.nu-study-desk.nu-app-shell .nu-month-day{border-right:0;border-top:1px solid var(--desk-rule);background:transparent;padding:9px 8px;min-height:clamp(72px,calc((100dvh - 245px)/6),110px)}
+.beta-app.nu-study-desk.nu-app-shell .nu-month-day:hover{background:var(--desk-surface)}
+.beta-app.nu-study-desk.nu-app-shell .nu-month-day[aria-pressed=true]{background:var(--desk-selection)}
+.beta-app.nu-study-desk.nu-app-shell .nu-month-day[data-outside]{background:transparent}
+.beta-app.nu-study-desk.nu-app-shell .nu-month-day time{font-size:14px;font-weight:500}
+.beta-app.nu-study-desk.nu-app-shell .nu-month-preview{border-left-color:var(--course-color)}
+.beta-app.nu-study-desk.nu-app-shell .nu-month-weekdays span{text-align:left;color:var(--desk-ink);padding:12px 8px}
+.beta-app.nu-study-desk.nu-app-shell .beta-calendar-toolbar .beta-month-title{font-size:26px}
+@media(max-width:600px){.beta-app.nu-study-desk.nu-app-shell .nu-month-day{padding:8px 4px;min-height:66px}}
+
+.nu-study-desk .nu-answer-linked-plan .beta-plan-editor fieldset[data-compact]{grid-template-columns:minmax(0,1fr);gap:10px}
+.nu-study-desk .nu-answer-linked-plan .beta-plan-editor fieldset>.nu-plan-details-toggle{background:transparent;color:var(--desk-muted);padding:5px 0;justify-self:start;font-weight:400;font-size:12px;order:5}
+.nu-study-desk .nu-answer-linked-plan .beta-plan-editor fieldset[data-compact] textarea{min-height:60px}
+.nu-study-desk .nu-answer-linked-plan .nu-saved-next-step{font-size:14px;color:var(--desk-ink);margin:6px 0}
+
+.beta-app.nu-study-desk.nu-app-shell .nu-month-day{min-height:clamp(56px,calc((100dvh - 330px)/6),98px)}
+.nu-study-desk .nu-continue-actions .nu-continue-secondary{font-size:13px;color:var(--desk-ink);font-weight:600}
+@media(max-width:600px){.beta-app.nu-study-desk.nu-app-shell .nu-month-day{min-height:66px}}
+
+/* Motion follows selection and never delays a command or save. */
+@media(min-width:901px){
+ .beta-app.nu-study-desk .nu-month-workspace{grid-template-columns:minmax(0,1fr) 0px;column-gap:0}
+ .beta-app.nu-study-desk .nu-month-workspace[data-panel-open]{grid-template-columns:minmax(0,1fr) 380px;column-gap:18px}
+}
+@media(min-width:901px) and (max-width:1100px){.beta-app.nu-study-desk .nu-month-workspace[data-panel-open]{grid-template-columns:minmax(0,1fr) 300px;column-gap:12px}}
+.beta-app.nu-study-desk .nu-month-agenda,.beta-app.nu-study-desk .nu-month-agenda .nu-calendar-inline-detail{animation:none}
+.nu-study-desk :is(.beta-composer,.beta-composer-caption,.nu-memory-link)[hidden]{display:none!important}
+.nu-study-desk .nu-compact-reply{display:flex;align-items:center;gap:16px;width:100%;min-height:48px;padding:12px 16px;border:1px solid var(--desk-rule);background:var(--desk-surface);color:var(--desk-ink);text-align:left;flex-shrink:0}
+.nu-study-desk .nu-compact-reply small{margin-left:auto;max-width:45%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--desk-muted);font-size:12px}
+.nu-study-desk .nu-compact-reply:focus-visible{outline:2px solid var(--desk-action);outline-offset:2px}
+@media(prefers-reduced-motion:no-preference){
+ html:not([data-neyvu-motion="reduce"]) .beta-app.nu-study-desk .nu-month-workspace{transition:grid-template-columns 420ms cubic-bezier(.16,1,.3,1),column-gap 420ms cubic-bezier(.16,1,.3,1)}
+ html:not([data-neyvu-motion="reduce"]) .nu-study-desk .nu-compact-reply{animation:nu-reply-settle 300ms cubic-bezier(.16,1,.3,1)}
+ html:not([data-neyvu-motion="reduce"]) .nu-study-desk .nu-source-panel{animation-duration:380ms;animation-timing-function:cubic-bezier(.16,1,.3,1)}
+ html:not([data-neyvu-motion="reduce"]) .nu-study-desk .nu-calendar-inline-detail form [role=status]{animation:nu-saved-confirmation 360ms cubic-bezier(.16,1,.3,1)}
+}
+@keyframes nu-reply-settle{from{opacity:.55;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes nu-saved-confirmation{from{opacity:.45;transform:translateY(4px)}to{opacity:1;transform:none}}
+html[data-neyvu-motion="reduce"] .beta-app.nu-study-desk .nu-month-workspace{transition:none}
+@media(prefers-reduced-motion:reduce){.beta-app.nu-study-desk .nu-month-workspace,.nu-study-desk .nu-compact-reply{transition:none;animation:none}}
+
+/* Keep type at its final measure while the calendar makes room for the panel. */
+@media(min-width:901px){.beta-app.nu-study-desk .nu-month-agenda{width:380px;box-sizing:border-box;justify-self:end;position:relative;z-index:1}}
+@media(min-width:901px) and (max-width:1100px){.beta-app.nu-study-desk .nu-month-agenda{width:300px}}
+
+/* The open work layer has depth; the surrounding month remains calm. */
+.beta-app.nu-study-desk .nu-month-agenda{box-shadow:0 12px 28px -20px color-mix(in srgb,var(--desk-ink) 32%,transparent)}
+
+/* Research-first hierarchy preserves the approved Quiet Index tokens. */
+.nu-research-deadlines{margin-top:28px}.nu-research-deadlines .nu-priority-guidance{display:none}.nu-optional-plans{margin-top:24px;padding-top:16px;border-top:1px solid #8883}.nu-optional-plans>summary{cursor:pointer;font-size:14px;font-weight:600}.nu-optional-plans .nu-continue-work{margin-top:18px}.nu-optional-plans .nu-continue-work>h2,.nu-optional-plans .nu-continue-caption{display:none}

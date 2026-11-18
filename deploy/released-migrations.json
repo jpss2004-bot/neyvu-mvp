@@ -1,0 +1,217 @@
+{
+  "description": "Migrations already applied to the hosted SchoolVault database. Each file must stay byte-identical (scripts/migrate-beta.mjs refuses a changed applied migration); add a new numbered migration instead. Append entries only after a migration is released, with scripts/predeploy_gate.py --record-released-migrations.",
+  "recorded": "2026-10-07: 001-020 from source main d00b1a8 (lib/beta/release.ts schema 20; live health reported schema 20 on 2026-10-06). Each file has a single commit in git history; the hosted schema_migrations table was not read. 2026-11-18: 030-041 recorded after the 12:26 AM Halifax release of export 3e6ce8c (schema 41).",
+  "migrations": [
+    {
+      "version": 1,
+      "file": "001_schoolvault.sql",
+      "sha256": "2ef16fc97d4f906433881b079a826d2012005511717ba560f785829d37c37ba8"
+    },
+    {
+      "version": 2,
+      "file": "002_storage_budget.sql",
+      "sha256": "e867327bb81fcd45ad9ed9c9d97484dbccbbce68296eab87774b8ab7a4117004"
+    },
+    {
+      "version": 3,
+      "file": "003_companion.sql",
+      "sha256": "a88f386182abf2960abe989c092b59abd82a08509f5513d8ea19905e12db0233"
+    },
+    {
+      "version": 4,
+      "file": "004_worker.sql",
+      "sha256": "7ef4a3910bd877ebb5eed2301cd3774eefa4b46445f22792c5cb692d381d9cff"
+    },
+    {
+      "version": 5,
+      "file": "005_demo.sql",
+      "sha256": "a6ccc652c44543fc6f77830b16f40e3117a45a4aeb28b577b77bba2038aa3583"
+    },
+    {
+      "version": 6,
+      "file": "006_capabilities.sql",
+      "sha256": "fac34a51d315b56254a6da5e3a8007cd9f7df9f071f2cb89058128d677dd7a90"
+    },
+    {
+      "version": 7,
+      "file": "007_worker_fairness.sql",
+      "sha256": "d53427bc5a12f007ddacda0d5238d39c14ed846e8907a04b4bedf3a4d8b1779f"
+    },
+    {
+      "version": 8,
+      "file": "008_chat_context_versions.sql",
+      "sha256": "7c05369fbb141c90dd6068b357b732025e41856444382fbf9f288406b907cad4"
+    },
+    {
+      "version": 9,
+      "file": "009_student_memory.sql",
+      "sha256": "484d16eadce692212a878442eac29affa7e9a60d524c92d75a3568c932b87884"
+    },
+    {
+      "version": 10,
+      "file": "010_source_profiles.sql",
+      "sha256": "4a068afd99682afed9abab4da76b6123acf65632646ebd258eb4bbf5f2aa3523"
+    },
+    {
+      "version": 11,
+      "file": "011_automatic_reading.sql",
+      "sha256": "5c0b896772b9cb9a745beb865580cc3ac981f9c4bf2890a375c7aa3d234e609d"
+    },
+    {
+      "version": 12,
+      "file": "012_student_planning.sql",
+      "sha256": "f436bcbabf7e1b00d77d516dc69399de6afbeb668aab36f2424af333971f46a5"
+    },
+    {
+      "version": 13,
+      "file": "013_moodle_receipts.sql",
+      "sha256": "09d03e4fcdb55fef401c1cef43bc5a62361ea5b3f4bbffdd96e32ca6169e14fd"
+    },
+    {
+      "version": 14,
+      "file": "014_class_recordings.sql",
+      "sha256": "7fe1d42c11126aff9e468bae9ea9db1ae1aafb82b4e15f949fc003206ab9c60b"
+    },
+    {
+      "version": 15,
+      "file": "015_capture_coverage.sql",
+      "sha256": "405f4a74c1740329372fac0088d4ed9fe0cbeefa0a5ee7442745b792c14114dc"
+    },
+    {
+      "version": 16,
+      "file": "016_class_transcription.sql",
+      "sha256": "ef25ef550469b1924046fcac3765a0b92dc1e92dfbd538bdd52c6c57761e5231"
+    },
+    {
+      "version": 17,
+      "file": "017_class_cornell.sql",
+      "sha256": "bc490b45723e38477ee50de7169e97ae25b84487ac7546e15081ef059df925f9"
+    },
+    {
+      "version": 18,
+      "file": "018_class_actions.sql",
+      "sha256": "d1319ad38b1bc7c88f9d26611df13e236f031af4a7c57728cf30faa82a0b48df"
+    },
+    {
+      "version": 19,
+      "file": "019_admissions.sql",
+      "sha256": "0a03bf9cabab370e1101f8f1660b0f87c7eddbefb13cba71dcb69d6483dc64f1"
+    },
+    {
+      "version": 20,
+      "file": "020_pilot_reports.sql",
+      "sha256": "c65022280a6c83ed5b202aaad99bdcfdb30b653a669619176bc159f48b87bdab"
+    },
+    {
+      "version": 21,
+      "file": "021_global_table_lockdown.sql",
+      "sha256": "97f86eb538d06dd8e0cc69cda07809a5a4310d537b1fda9cd0718c3b5078fe37"
+    },
+    {
+      "version": 22,
+      "file": "022_approval_email.sql",
+      "sha256": "91e38c53195c39f1e50473fcbb2f148d8aa3abaa10b9572f72f22d3cff49671c"
+    },
+    {
+      "version": 23,
+      "file": "023_pilot_access.sql",
+      "sha256": "39d95ce32f31a1bf0985ab4bd7e213a11607e80b8bc497dfee4205b27552d6e7"
+    },
+    {
+      "version": 24,
+      "file": "024_moodle_receipt_checks.sql",
+      "sha256": "2bfe350ea3e8b4d6bcab862ea9a0aa862d08bb43036f4e441df839810cef4f14"
+    },
+    {
+      "version": 25,
+      "file": "025_request_notifications.sql",
+      "sha256": "cc596eb9c9dd9061a8c9b57e445985e27c096836d2cca9c0942486635012f571"
+    },
+    {
+      "version": 26,
+      "file": "026_request_language.sql",
+      "sha256": "7dbc86f5d5d57692afa5f3f4451ce8caf73cdd5b7c7a5d547e493fb91027fd92"
+    },
+    {
+      "version": 27,
+      "file": "027_forum_evidence.sql",
+      "sha256": "de1c82d14bb720c0a5ed6f67583d77aa25234d45edb59c0b38d43e1c87b8066e"
+    },
+    {
+      "version": 28,
+      "file": "028_study_availability.sql",
+      "sha256": "ebbd8c6e90d656e4ec6d951bd140d6790a933e825e6c03aa3d3492dd7cf6ec4f"
+    },
+    {
+      "version": 29,
+      "file": "029_research_references.sql",
+      "sha256": "46715c89b4b22beca47bf2e4beb7833141315febdac0e8a242be7d11e8762b2e"
+    },
+    {
+      "version": 30,
+      "file": "030_passage_embeddings.sql",
+      "sha256": "889f6794e0232a3b5a1ed5487ec9b4f36e0955923e1fa3c28b18711fc6e61333"
+    },
+    {
+      "version": 31,
+      "file": "031_answer_traces.sql",
+      "sha256": "37224e368f66262c976262bc70e9bbc721df29ce894ecc08149d1ef3e869bdbd"
+    },
+    {
+      "version": 32,
+      "file": "032_chunk_metadata.sql",
+      "sha256": "b34e0822f79205582c3a96ba096aeb5a85eea16c7a696dd4278e6a5311a04303"
+    },
+    {
+      "version": 33,
+      "file": "033_connector_accounts.sql",
+      "sha256": "af91b997fd9b7f83659a43b6da2ba55a55779c629461b6e9207b2a57af0294e3"
+    },
+    {
+      "version": 34,
+      "file": "034_institution_corpus.sql",
+      "sha256": "f549ffbb9cc654d9d4aaa8dd0ddb0aec580fd043e62c937e5dc6b59a56c665b0"
+    },
+    {
+      "version": 35,
+      "file": "035_knowledge_graph.sql",
+      "sha256": "ec933ea1e0d907d8b5069f99bfa365791fb13860b9230fcd63cba76e39da1255"
+    },
+    {
+      "version": 36,
+      "file": "036_learner_profile.sql",
+      "sha256": "0e81049d876083718630f20389b88ab74cde26de9e030f1eea4b5d5fa50df751"
+    },
+    {
+      "version": 37,
+      "file": "037_organizations.sql",
+      "sha256": "121ae69f12f266dd82d36b07f79e996879c2c125acaadfa14fb6dd0ffd8ba584"
+    },
+    {
+      "version": 38,
+      "file": "038_assistant_oauth.sql",
+      "sha256": "f33c4595b3e81443e8b05716e1435da894e5ee1e5bb7c75e54b5fbd8bf773879"
+    },
+    {
+      "version": 39,
+      "file": "039_capture_consent.sql",
+      "sha256": "1f28a5f5d7cb03617576c51cedfb2354f03c8c4369c99baacd10f27558d7d9a0"
+    },
+    {
+      "version": 40,
+      "file": "040_graph_jobs.sql",
+      "sha256": "0d2e762b850fa8ac98f3dbd4e58b2f7f207c4bd8c2c19a395d04b7af154b6188"
+    },
+    {
+      "version": 41,
+      "file": "041_definer_function_acls.sql",
+      "sha256": "7a5cc2e3bcd5a9b101786aed29b8d436de2b6c2a7c8d74a83b06283c5e90b111"
+    }
+  ],
+  "verified": {
+    "checked_at": "2026-11-18T13:27:49.091Z",
+    "through": 41,
+    "method": "Read-only repeatable-read snapshot of version and SHA-256 from the live School database schema_migrations table, taken while held during the wording release; all 41 files match",
+    "live_export_commit": "b8bb5b1d284bbe9855c1bddc6932bce895e00756"
+  }
+}

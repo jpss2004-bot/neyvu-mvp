@@ -1,0 +1,275 @@
+{
+ "_note": "Synthetic recorded-shape D2L Brightspace Valence responses (LP 1.46 / LE 1.74 routes: whoami, myenrollments, dropbox folders, content toc). Synthetic University. No real institution, student or credential.",
+ "origin": "https://learn.example.com",
+ "accessToken": "fixture-token-not-a-real-credential",
+ "expectedIdentity": "7300",
+ "lpVersion": "1.46",
+ "leVersion": "1.74",
+ "responses": {
+  "/d2l/api/lp/1.46/users/whoami": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": {
+    "Identifier": "7300",
+    "FirstName": "Sample",
+    "LastName": "Learner",
+    "UniqueName": "slearner",
+    "ProfileIdentifier": "abc123"
+   }
+  },
+  "/d2l/api/lp/1.46/enrollments/myenrollments/": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": {
+    "PagingInfo": {
+     "Bookmark": "6606",
+     "HasMoreItems": true
+    },
+    "Items": [
+     {
+      "OrgUnit": {
+       "Id": 6606,
+       "Type": {
+        "Id": 3,
+        "Code": "Course Offering",
+        "Name": "Course Offering"
+       },
+       "Name": "Organizational Behaviour (sample)",
+       "Code": "DEMO 2030",
+       "HomeUrl": null,
+       "ImageUrl": null
+      },
+      "Access": {
+       "IsActive": true,
+       "CanAccess": true,
+       "ClasslistRoleName": "Student"
+      }
+     },
+     {
+      "OrgUnit": {
+       "Id": 6000,
+       "Type": {
+        "Id": 2,
+        "Code": "Department",
+        "Name": "Department"
+       },
+       "Name": "Faculty of Business",
+       "Code": "FBUS",
+       "HomeUrl": null,
+       "ImageUrl": null
+      },
+      "Access": {
+       "IsActive": true,
+       "CanAccess": true,
+       "ClasslistRoleName": null
+      }
+     }
+    ]
+   }
+  },
+  "/d2l/api/lp/1.46/enrollments/myenrollments/?bookmark=6606": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": {
+    "PagingInfo": {
+     "Bookmark": null,
+     "HasMoreItems": false
+    },
+    "Items": [
+     {
+      "OrgUnit": {
+       "Id": 6710,
+       "Type": {
+        "Id": 3,
+        "Code": "Course Offering",
+        "Name": "Course Offering"
+       },
+       "Name": "Onboarding: Safety Essentials (corporate sample)",
+       "Code": "HSE-101",
+       "HomeUrl": null,
+       "ImageUrl": null
+      },
+      "Access": {
+       "IsActive": true,
+       "CanAccess": true,
+       "ClasslistRoleName": "Learner"
+      }
+     }
+    ]
+   }
+  },
+  "/d2l/api/le/1.74/6606/dropbox/folders/": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": [
+    {
+     "Id": 812,
+     "CategoryId": null,
+     "Name": "Team charter",
+     "CustomInstructions": null,
+     "Instructions": {
+      "Text": "Upload your team charter (2 pages).",
+      "Html": "<p>Upload your team charter (2 pages).</p>"
+     },
+     "Attachments": [],
+     "TotalFiles": 0,
+     "UnreadFiles": 0,
+     "FlaggedFiles": 0,
+     "TotalUsers": 40,
+     "TotalUsersWithSubmissions": 0,
+     "TotalUsersWithFeedback": 0,
+     "Availability": null,
+     "GroupTypeId": null,
+     "DueDate": "2026-11-18T03:59:00.000Z",
+     "DisplayInCalendar": true,
+     "Assessment": {
+      "ScoreDenominator": 10,
+      "Rubrics": []
+     },
+     "NotificationEmail": null,
+     "IsHidden": false,
+     "LinkAttachments": [],
+     "ActivityId": "https://ids.example.com/activities/dropbox/812",
+     "IsAnonymous": false,
+     "DropboxType": 1,
+     "SubmissionType": 0,
+     "CompletionType": 0,
+     "GradeItemId": null,
+     "AllowOnlyUsersWithSpecialAccess": null
+    },
+    {
+     "Id": 813,
+     "CategoryId": null,
+     "Name": "Reflection journal 3",
+     "CustomInstructions": null,
+     "Instructions": {
+      "Text": "Write 300 words on the week 9 case.",
+      "Html": ""
+     },
+     "Attachments": [],
+     "TotalFiles": 0,
+     "UnreadFiles": 0,
+     "FlaggedFiles": 0,
+     "TotalUsers": 40,
+     "TotalUsersWithSubmissions": 0,
+     "TotalUsersWithFeedback": 0,
+     "Availability": null,
+     "GroupTypeId": null,
+     "DueDate": null,
+     "DisplayInCalendar": false,
+     "Assessment": {
+      "ScoreDenominator": 5,
+      "Rubrics": []
+     },
+     "NotificationEmail": null,
+     "IsHidden": false,
+     "LinkAttachments": [],
+     "ActivityId": "https://ids.example.com/activities/dropbox/813",
+     "IsAnonymous": false,
+     "DropboxType": 1,
+     "SubmissionType": 0,
+     "CompletionType": 0,
+     "GradeItemId": null,
+     "AllowOnlyUsersWithSpecialAccess": null
+    }
+   ]
+  },
+  "/d2l/api/le/1.74/6606/content/toc": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": {
+    "Modules": [
+     {
+      "ModuleId": 1201,
+      "Title": "Week 9 – Teams",
+      "SortOrder": 1,
+      "IsHidden": false,
+      "IsLocked": false,
+      "LastModifiedDate": "2026-11-01T12:00:00.000Z",
+      "Description": {
+       "Text": "",
+       "Html": ""
+      },
+      "Topics": [
+       {
+        "TopicId": 3301,
+        "Identifier": "3301",
+        "TypeIdentifier": "File",
+        "Title": "Week 9 slides",
+        "Url": "/content/enforced/6606-DEMO2030/week9-slides.pdf",
+        "SortOrder": 1,
+        "IsHidden": false,
+        "IsLocked": false,
+        "IsBroken": false,
+        "LastModifiedDate": "2026-11-02T14:30:00.000Z",
+        "Description": {
+         "Text": "Slides for Tuesday. Read pages 210–230 before class.",
+         "Html": "<p>Slides for Tuesday. Read pages 210–230 before class.</p>"
+        }
+       }
+      ],
+      "Modules": [
+       {
+        "ModuleId": 1202,
+        "Title": "Case materials",
+        "SortOrder": 1,
+        "IsHidden": false,
+        "IsLocked": false,
+        "LastModifiedDate": "2026-11-01T12:00:00.000Z",
+        "Description": {
+         "Text": "",
+         "Html": ""
+        },
+        "Modules": [],
+        "Topics": [
+         {
+          "TopicId": 3302,
+          "Identifier": "3302",
+          "TypeIdentifier": "Link",
+          "Title": "Team case study link",
+          "Url": "https://cases.example.com/teams-case",
+          "SortOrder": 1,
+          "IsHidden": false,
+          "IsLocked": false,
+          "IsBroken": false,
+          "LastModifiedDate": "2026-11-03T09:00:00.000Z",
+          "Description": {
+           "Text": "",
+           "Html": ""
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "/d2l/api/le/1.74/6710/dropbox/folders/": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": []
+  },
+  "/d2l/api/le/1.74/6710/content/toc": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": {
+    "Modules": []
+   }
+  }
+ }
+}

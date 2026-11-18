@@ -1,0 +1,112 @@
+/* Daylight materials for the original Constellation story and choreography. */
+.sv-constellation.daylight{
+ color-scheme:light;
+ --canvas:#f4f7fc;--canvas-raise:#fff;--canvas-sink:#edf2fa;
+ --key:#5267b1;--key-70:#5267b1b3;--key-40:#5267b166;--key-22:#5267b138;--key-12:#5267b11f;--key-07:#5267b112;--on-key:#fff;
+ --text:#24334c;--text-2:#566781;--text-3:#61728a;
+ --paper-hi:#fff;--paper:#f8fbff;--paper-lo:#e4edf8;
+ --ink:#273a55;--ink-2:#506780;--ink-3:#6e819a;
+ --panel-hi:#eef0fc;--panel:#e0e6f6;--panel-ink:#34466b;--panel-ink-2:#61759a;--panel-bar:#bbc9e3;
+ --shadow:#506b9c38;
+}
+.sv-constellation.daylight .top{background:#f5f8fce8;backdrop-filter:blur(18px);border-color:#dce5f0}
+.sv-constellation.daylight .top-nav .nav-access{background:#344b71;color:white;padding:0 16px;border-radius:9px}
+.sv-constellation.daylight .top-nav .nav-access:hover{background:#52658d}
+.sv-constellation.daylight .nu-language,.sv-constellation.daylight .nu-language select{color:var(--text-2);background:transparent}
+.sv-constellation.daylight .nu-language select{border-color:transparent}
+.sv-constellation.daylight .btn-primary,.sv-constellation.daylight .sv-button{background:#344b71;box-shadow:0 8px 22px #354b751c}
+.sv-constellation.daylight .btn-primary:hover,.sv-constellation.daylight .sv-button:hover{background:#52658d;color:white}
+.sv-constellation.daylight .btn-primary>span{font-size:20px;margin-left:8px}
+.sv-constellation.daylight .btn-ghost{border-color:#c9d4e5;background:#ffffff66}
+.sv-constellation.daylight .landing-hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:32rem}
+.sv-constellation.daylight .landing-hero-actions .btn{padding:9px 12px;line-height:1.25;text-align:center}
+.sv-constellation.daylight .companion-release-detail{margin:12px 0;color:var(--text-2)}
+.sv-constellation.daylight .companion-mac-note{margin-top:14px;color:var(--text-2)}
+.sv-constellation.daylight .companion-mac-note a{color:var(--key);text-decoration:underline;text-underline-offset:.18em}
+.sv-constellation.daylight .companion-steps-title{margin-top:36px;font-size:clamp(21px,2.2vw,27px);font-weight:600}
+@media(max-width:480px){.sv-constellation.daylight .landing-hero-actions{grid-template-columns:1fr}}
+.sv-constellation.daylight .hero-copy h1{font-weight:620;letter-spacing:-.045em;line-height:1.07}
+.sv-constellation.daylight .lede{font-size:clamp(17px,1.4vw,19px);max-width:29em;line-height:1.7}
+.sv-constellation.daylight .stage{background:radial-gradient(ellipse at 78% 32%,#d8e3f5b3,transparent 52%),radial-gradient(ellipse at 68% 85%,#e1dff270,transparent 50%),linear-gradient(130deg,#fafcff,#eef3fa 65%,#e7eef8)}
+.sv-constellation.daylight .stage:before{content:'';position:absolute;width:70vw;height:70vw;left:48%;top:-24%;border-radius:50%;border:1px solid #ffffffa1;box-shadow:inset 0 0 100px #c5d6ed30,0 0 90px #ffffffe6;background:linear-gradient(135deg,#ffffff55,transparent 70%);pointer-events:none}
+.sv-constellation.daylight .sheet{border:1px solid #ffffffd9;box-shadow:0 calc(var(--u)*32) calc(var(--u)*48) calc(var(--u)*-18) #59729642,0 2px 3px #53729a14}
+.sv-constellation.daylight .note{background:linear-gradient(145deg,#f5f4ff,#e0e7f8)}
+.sv-constellation.daylight .c-b{background:#e3e7f5}.sv-constellation.daylight .c-b.me{background:#d3deef}
+.sv-constellation.daylight .tabs{background:#dce5f2}.sv-constellation.daylight .tabs span{background:#eaf0f9}.sv-constellation.daylight .tabs span:first-child{background:#fff}
+.sv-constellation.daylight .hero-conversation{position:absolute;z-index:6;left:57%;top:58vh;width:340px;padding:18px 21px 16px;background:#fffffff5;border:1px solid white;border-radius:16px;box-shadow:0 26px 64px -20px #455d8c40,0 2px 6px #455d8c0f;transform:rotate(-2deg);font-size:13px;pointer-events:none}
+.sv-constellation.daylight .hc-top{display:flex;align-items:center;gap:8px;font-size:14px;margin-bottom:17px}
+.sv-constellation.daylight .hc-top img{width:25px;height:25px}.sv-constellation.daylight .hc-top>span{font-size:11px;color:#61718a;margin-left:auto}
+.sv-constellation.daylight .hc-question{font-size:13px;padding:10px 13px;background:#eeedf9;color:#535878;border-radius:10px 10px 3px 10px;margin:0 0 12px 26px}
+.sv-constellation.daylight .hc-answer{font-size:12px;line-height:1.7;color:#4f627b}
+.sv-constellation.daylight .hc-source{font-size:11px;line-height:1.5;margin-top:12px;padding-top:10px;border-top:1px solid #e2e8f2;color:#5f7597}
+.sv-constellation.daylight .story-scroll-hint{position:absolute;z-index:6;bottom:auto;top:calc(100svh - 46px);left:var(--gutter);display:flex;gap:13px;align-items:center;font-size:11px;color:#697e9c;pointer-events:none}
+.sv-constellation.daylight .story-scroll-hint i{height:27px;width:16px;border:1px solid #9cadc5;border-radius:10px;position:relative}.sv-constellation.daylight .story-scroll-hint i:after{content:'';position:absolute;width:2px;height:6px;background:#7387a7;left:6px;top:5px;animation:story-scroll 2.4s ease-in-out infinite}
+@keyframes story-scroll{50%{transform:translateY(7px);opacity:.35}}
+.sv-constellation.daylight .product-tour{background:linear-gradient(180deg,#f4f7fc,#fafbff 40%,#f2f6fb);padding-block:90px 70px}
+.sv-constellation.daylight .tour-heading{margin-bottom:34px;gap:60px}.sv-constellation.daylight .tour-heading h2{max-width:18ch}
+.sv-constellation.daylight .tour-nav{margin:0 0 22px;gap:8px 18px;border-bottom:1px solid #d9e3f0;padding-bottom:19px}
+.sv-constellation.daylight .tour-nav a{font-size:14px;text-decoration:none;padding:0 2px;border-bottom:2px solid transparent}
+.sv-constellation.daylight .tour-nav a:hover,.sv-constellation.daylight .tour-nav a[aria-current=step]{color:#485ea0;border-bottom-color:#7e87bf}
+.sv-constellation.daylight .tour-step-name{color:#6774a9}.sv-constellation.daylight .tour-copy h3{font-weight:590;letter-spacing:-.035em}
+.sv-constellation.daylight .tour-description{font-size:17px;line-height:1.8;color:#526680}
+.sv-constellation.daylight .tour-benefits{padding:0;list-style:none;display:grid;gap:11px;margin-top:23px;max-width:37ch}
+.sv-constellation.daylight .tour-benefits li{position:relative;padding-left:19px;font-size:14px;line-height:1.65;color:#3e5676}.sv-constellation.daylight .tour-benefits li:before{content:'✓';position:absolute;left:0;top:0;color:#6f9a95;font-size:12px}
+.sv-constellation.daylight .tour-prompt{font-size:14px;line-height:1.6;color:#5d6592;background:#e8ebf580;border:1px solid #dce2f1;padding:16px 18px;border-radius:4px 14px 14px 14px;margin-top:25px;max-width:38ch}
+.sv-constellation.daylight .tour-prompt>span{display:block;font-size:10px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;color:#7382a0}
+.sv-constellation.daylight .tour-evidence{font-size:13px;line-height:1.7;color:#6b7d95;border-color:#9cbab9;margin-top:20px}
+.sv-constellation.daylight .tour-inline,.sv-constellation.daylight.motion-ok:not(.motion-paused) .tour-stage{border-color:#d4deed;box-shadow:0 30px 70px -30px #536d9b55,0 2px 5px #6d82a21a;border-radius:16px}
+.sv-constellation.daylight .tour-to-demo{border-top-color:#d6dfed;padding-top:36px;margin-top:28px;font-size:24px;color:#3b5272}
+.sv-constellation.daylight .journey-progress{background:linear-gradient(90deg,#89afbd,#9292c6,#7995c1)}
+.sv-constellation.daylight .pilot-story{overflow:hidden;position:relative;padding:110px 0;background:radial-gradient(ellipse at 14% 45%,#e3e7fa,transparent 55%),#eef2fa;border-top:1px solid #dfe6f2;border-bottom:1px solid #dfe6f2}
+.sv-constellation.daylight .pilot-story-grid{display:grid;grid-template-columns:.85fr 1.15fr;align-items:center;gap:100px}
+.sv-constellation.daylight .story-kicker{font-size:13px;color:#6a7e9a;margin-bottom:20px}
+.sv-constellation.daylight .pilot-story-copy h2{font-weight:590;max-width:18ch}.sv-constellation.daylight .pilot-story-copy>p:not(.story-kicker){font-size:16px;line-height:1.85;color:#5a6d88;margin-top:23px;max-width:50ch}
+.sv-constellation.daylight .founder-credit{display:inline-block;font-size:14px;margin-top:27px;text-decoration:none;font-weight:560;color:#395374}.sv-constellation.daylight .founder-credit>span{display:block;font-size:12px;font-weight:400;color:#71829b;margin-top:2px}
+.sv-constellation.daylight .pilot-sculpture{position:relative;width:100%;height:350px;perspective:1000px;display:grid;place-items:center}
+.sv-constellation.daylight .pilot-orbit{position:absolute;inset:-10px -20px;border:1px solid #ffffffb8;border-radius:50%;transform:rotate(-20deg);box-shadow:inset 0 0 60px #d9dff1;background:radial-gradient(ellipse at center,#ffffff77,transparent 70%)}
+.sv-constellation.daylight .pilot-mark{display:grid;place-items:center;position:relative;width:230px;height:230px;border-radius:35%;background:linear-gradient(135deg,#fff,#e4eaf6);box-shadow:inset 2px 3px 3px white,inset -4px -5px 8px #c7d1e64a,22px 26px 50px #889cc52e;transform:rotate(-12deg)}
+.sv-constellation.daylight .pilot-mark img{transform:rotate(12deg);filter:drop-shadow(0 10px 10px #9bacce40)}
+.sv-constellation.daylight .pilot-note{position:absolute;padding:12px 20px;background:#f9fcff;border:1px solid white;border-radius:10px;box-shadow:0 12px 30px #718bb92e;font-size:13px;color:#5a7195}
+.sv-constellation.daylight .pn-one{left:0;top:45px;transform:rotate(-8deg)}.sv-constellation.daylight .pn-two{right:-8px;top:145px;transform:rotate(7deg);background:#eeecfa;color:#756a9f}.sv-constellation.daylight .pn-three{left:30px;bottom:25px;transform:rotate(-4deg);background:#e5f1ec;color:#5f8779}
+.sv-constellation.daylight .getin{padding:76px 0 28px;background:#f8faff}.sv-constellation.daylight .getin h2{font-size:38px;font-weight:580}.sv-constellation.daylight .steps{margin-top:38px}.sv-constellation.daylight .steps:before{background:linear-gradient(90deg,#a6b9d8,#e5eaf4)}
+.sv-constellation.daylight .access{background:#f8faff;padding:54px 0 90px}.sv-constellation.daylight .access-head h2{font-weight:590;max-width:14ch}.sv-constellation.daylight .access-head p{font-size:17px;line-height:1.8}
+.sv-constellation.daylight .sv-request-form,.sv-constellation.daylight .sv-request-result{max-width:100%;padding:34px;background:white;border:1px solid #e1e8f1;border-radius:17px;box-shadow:0 25px 65px -30px #6b81a743}
+.sv-constellation.daylight .sv-request-form input:not([type=checkbox]){background:#f9fbfe;border-color:#d7e0ed}.sv-constellation.daylight .sv-hint{font-size:12px}.sv-constellation.daylight .sv-request-form .sv-check{font-size:13px}.sv-constellation.daylight .sv-button:disabled{cursor:not-allowed}
+.sv-constellation.daylight .limits{padding:85px 0;background:white}.sv-constellation.daylight .limits-head h2{font-size:36px;font-weight:580}.sv-constellation.daylight .limits-list h3{font-size:18px;font-weight:570}.sv-constellation.daylight .limits-list p{font-size:15px;line-height:1.8}.sv-constellation.daylight .limits-list li{padding-block:24px}
+.sv-constellation.daylight .continued-rule{background:#a7bad7}.sv-constellation.daylight .pilot-questions{padding:80px 0;background:#f5f8fc}.sv-constellation.daylight .pilot-questions h2{font-weight:590}.sv-constellation.daylight .pilot-question-list summary{color:var(--text);font-size:17px}.sv-constellation.daylight .foot{background:#f0f4fa}
+@media(min-width:1000px) and (min-height:850px){.sv-constellation.daylight.motion-ok:not(.motion-paused) .tour-step{min-height:85svh;padding:40px 0}.sv-constellation.daylight.motion-ok:not(.motion-paused) .tour-stage{top:calc(var(--header-h) + 34px);margin-top:35px}}
+@media(max-width:1100px){.sv-constellation.daylight .badge-d{display:none}.sv-constellation.daylight .hero-conversation{left:60%;width:310px}.sv-constellation.daylight .pilot-story-grid{gap:55px}}
+@media(max-width:850px){.sv-constellation.daylight .top-nav .nav-questions{display:none}.sv-constellation.daylight .hero-conversation{left:57%;width:290px}.sv-constellation.daylight .pilot-story-grid{gap:40px;grid-template-columns:.8fr 1.2fr}.sv-constellation.daylight .pilot-mark{width:170px;height:170px}.sv-constellation.daylight .pilot-mark img{width:95px;height:auto}.sv-constellation.daylight .pilot-note{font-size:11px;padding:10px 13px}.sv-constellation.daylight .pn-two{right:-10px}.sv-constellation.daylight .pilot-story-copy h2{font-size:38px}.sv-constellation.daylight .tour-heading{grid-template-columns:1fr;gap:20px}}
+@media(max-width:640px),(max-width:1000px) and (max-height:500px){
+ .sv-constellation.daylight .hero-copy{padding-bottom:10px}.sv-constellation.daylight .hero-conversation{position:relative;left:auto;top:auto;width:calc(100% - 48px);max-width:370px;margin:25px auto 42px;transform:rotate(-1.5deg);padding:20px 22px}.sv-constellation.daylight .hc-answer{font-size:13px}.sv-constellation.daylight .story-scroll-hint{display:none}.sv-constellation.daylight .hero-copy h1{max-width:10em;font-size:clamp(37px,10vw,48px)}
+ .sv-constellation.daylight .product-tour{padding:45px 0}.sv-constellation.daylight .tour-heading h2{font-size:34px}.sv-constellation.daylight .tour-copy h3{font-size:30px}.sv-constellation.daylight .tour-description{font-size:16px}.sv-constellation.daylight .tour-benefits{font-size:14px}.sv-constellation.daylight .tour-step{padding-block:30px 38px}.sv-constellation.daylight .tour-prompt{max-width:none}.sv-constellation.daylight .tour-inline{border-radius:12px}
+ .sv-constellation.daylight .pilot-story{padding:60px 0}.sv-constellation.daylight .pilot-story-grid{grid-template-columns:1fr;gap:35px}.sv-constellation.daylight .pilot-sculpture{width:280px;height:240px;justify-self:center}.sv-constellation.daylight .pilot-orbit{inset:0}.sv-constellation.daylight .pilot-mark{width:170px;height:170px}.sv-constellation.daylight .pn-one{left:-6px;top:22px}.sv-constellation.daylight .pn-two{right:-4px;top:100px}.sv-constellation.daylight .pn-three{left:30px;bottom:4px}.sv-constellation.daylight .pilot-story-copy h2{font-size:35px}.sv-constellation.daylight .pilot-story-copy>p:not(.story-kicker){font-size:15px}
+ .sv-constellation.daylight .getin{padding:48px 0 20px}.sv-constellation.daylight .getin h2{font-size:31px}.sv-constellation.daylight .access{padding:30px 0 56px}.sv-constellation.daylight .access-head h2{font-size:36px;max-width:19ch}.sv-constellation.daylight .sv-request-form{padding:24px 20px;gap:17px}.sv-constellation.daylight .access-grid{gap:28px}.sv-constellation.daylight .limits{padding:50px 0}.sv-constellation.daylight .limits-head h2{font-size:31px}.sv-constellation.daylight .pilot-questions{padding:50px 0}
+}
+@media(prefers-reduced-motion:reduce){html:has(.sv-constellation.daylight){scroll-behavior:auto}.sv-constellation.daylight .hero-conversation{transform:none}.sv-constellation.daylight .story-scroll-hint{display:none}}
+/* Keep small-screen navigation in one calm, stable row. */
+.sv-constellation.daylight .top-nav{flex-wrap:nowrap;min-width:0}
+@media(max-width:360px){.sv-constellation.daylight .top-nav .nav-quiet{display:none}.sv-constellation.daylight .top-nav{margin-left:auto}}
+
+.sv-constellation.daylight .nav-join-short{display:none}
+@media(max-width:640px){.sv-constellation.daylight .top-nav .nav-access{display:inline-flex;font-size:12px;padding:0 10px;min-height:40px}.sv-constellation.daylight .nav-join-full{display:none}.sv-constellation.daylight .nav-join-short{display:inline}.sv-constellation.daylight .top-nav .nav-quiet{display:none}.sv-constellation.daylight .brand-wordmark{width:100px}}
+@media(max-width:360px){.sv-constellation.daylight .brand-wordmark{width:75px}.sv-constellation.daylight .top-nav .nav-access{font-size:11px;padding:0 8px}}
+/* The same fictional material moves from a question into an inspectable answer. */
+.sv-constellation.daylight .hero-conversation{padding:0;width:410px;top:42vh;pointer-events:auto;}
+.chat-demo{color:#24334c;font-size:14px;line-height:1.55;}
+.chat-demo-heading{display:flex;align-items:center;gap:8px;margin-bottom:14px;}.chat-demo-heading>span{margin-left:auto;color:#61728a;font-size:11px;}
+.chat-demo-context{font-size:11px;font-weight:650;color:#52647e;margin:0 0 16px;}.chat-demo-context span{font-weight:400;margin-left:8px;}
+.chat-demo-question{background:#eeebf8;border-radius:14px 14px 3px 14px;padding:12px 16px;margin:0 0 16px 18px;color:#35415b;}
+.chat-demo-answer{min-height:132px;}.chat-demo-answer p{margin:0;}.chat-demo-thinking{display:flex;align-items:center;gap:4px;color:#61728a;font-size:12px;}.chat-demo-thinking span{margin-left:6px;}.chat-demo-thinking i{width:5px;height:5px;background:#6370a0;border-radius:50%;animation:chat-pulse 1s ease-in-out infinite;}.chat-demo-thinking i:nth-child(2){animation-delay:.15s;}.chat-demo-thinking i:nth-child(3){animation-delay:.3s;}
+.chat-demo-caret{display:inline-block;height:1em;width:2px;background:#6a68a0;vertical-align:-2px;margin-left:3px;animation:chat-pulse .7s infinite;}
+.chat-demo-citation{display:flex;width:100%;justify-content:space-between;gap:10px;text-align:left;background:#eff5f6;border:1px solid #d9e5e7;border-radius:10px;padding:10px 12px;color:#365d66;font:inherit;font-size:11px;cursor:pointer;}.chat-demo-citation>span:last-child{white-space:nowrap;}
+.chat-demo-source{margin:10px 0;padding:12px 15px;border-left:3px solid #8193b2;background:#f4f6fa;font-size:12px;}.chat-demo-source small{display:block;margin-bottom:6px;color:#61728a;}
+.chat-demo-choices{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px;}.chat-demo-choices button{padding:8px 10px;border:1px solid #ccd4e1;border-radius:20px;background:white;color:#465572;font:inherit;font-size:11px;cursor:pointer;}.chat-demo-choices button:hover,.chat-demo-choices button[aria-pressed=true]{background:#eeebf8;border-color:#a6a4c7;}.chat-demo button:focus-visible{outline:3px solid #7b85bc;outline-offset:3px;}
+.chat-demo-disclosure{font-size:10px!important;line-height:1.5!important;color:#61728a!important;margin:12px 0 0!important;}
+.chat-demo-compact{padding:20px 22px;font-size:12px;}.chat-demo-compact .chat-demo-answer{min-height:78px;}.chat-demo-compact .chat-demo-question{padding:9px 12px;margin-bottom:12px;}.chat-demo-compact .chat-demo-source{max-height:100px;overflow:auto;}.chat-demo-compact .chat-demo-choices button{font-size:10px;padding:6px 9px;}
+.material-connection{padding:80px 0 40px;background:#f4f7fc;}.material-connection>.wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:40px 70px;}.material-connection h2{font-size:clamp(28px,3.5vw,46px);letter-spacing:-.045em;line-height:1.12;margin:12px 0 24px;}.material-connection p{color:#566781;font-size:16px;line-height:1.75;}.material-connection ol{list-style:none;padding:0;margin:4px 0;}.material-connection li{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid #dce3ed;}.material-connection li>span{color:#8090aa;font-size:12px;padding-top:6px;}.material-connection h3{margin:0 0 6px;font-size:20px;}.material-connection li p{font-size:14px;margin:0;}.material-connection .connection-note{grid-column:1/-1;max-width:900px;font-size:12px;}.connection-note a{color:#374d78;text-decoration:underline;text-underline-offset:3px;}
+@keyframes chat-pulse{50%{opacity:.3;transform:translateY(-2px)}}
+.motion-paused .chat-demo-thinking i,.motion-paused .chat-demo-caret{animation:none;}
+@media(max-width:1100px){.sv-constellation.daylight .hero-conversation{width:350px;right:4%;}.chat-demo-compact{padding:16px 18px;}}
+@media(max-width:849px){.material-connection{padding:55px 0 20px;}.material-connection>.wrap{grid-template-columns:1fr;gap:18px;}.sv-constellation.daylight .hero-conversation{width:calc(100% - 32px);max-width:480px;right:auto;top:auto;}.chat-demo-compact{font-size:14px;padding:20px;}.chat-demo-compact .chat-demo-answer{min-height:105px;}}
+@media(prefers-reduced-motion:reduce){.chat-demo-thinking i,.chat-demo-caret{animation:none;}}

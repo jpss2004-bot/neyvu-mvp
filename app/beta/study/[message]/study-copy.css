@@ -1,0 +1,90 @@
+.study-copy-shell{background:#000;color:#f5f5f7;min-height:100vh;padding:20px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.study-copy-toolbar{max-width:880px;margin:0 auto 20px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.study-copy-toolbar a{color:#dce8ff;display:inline-block;min-height:44px;padding:10px 0}
+.study-print-action{text-align:right}
+.study-print-action button{background:#f5f5f7;color:#15171b;border-color:#dce0e5;border-radius:9px}
+.study-print-action p{font-size:13px;line-height:1.4;margin:7px 0 0;max-width:38ch;color:#cbd1da}
+.study-copy-paper{background:#fff;color:#111827;max-width:880px;margin:auto;padding:56px 60px;font-size:16px;line-height:1.6}
+.study-copy-paper a{color:#0f766e}
+.study-copy-heading{display:block;border-bottom:2px solid #0f766e;padding-bottom:24px;margin-bottom:18px}
+.study-copy-heading h1{font-family:inherit;font-size:36px;font-weight:650;letter-spacing:-.6px;margin:8px 0}
+.study-copy-heading p{margin:3px 0;color:#475569}
+.study-copy-heading span{display:block;margin-top:16px;font-size:14px;font-weight:650}
+.study-copy-contents{display:flex;gap:18px;flex-wrap:wrap;margin:0 0 18px;font-size:14px}
+.study-copy-scope,.study-copy-change{font-size:14px;margin:0 0 24px}
+.study-copy-change{border-left:3px solid #a16207;padding-left:14px}
+.study-copy-paper section{margin:32px 0}
+.study-copy-paper h2{font-family:inherit;font-size:23px;font-weight:650;letter-spacing:-.3px;margin:0 0 16px;break-after:avoid}
+.study-copy-prose p{margin:0 0 16px}
+.study-copy-prose h1,.study-copy-prose h2,.study-copy-prose h3{font-family:inherit;font-size:19px;font-weight:650;line-height:1.4;letter-spacing:0;margin:24px 0 12px}
+.study-copy-prose{overflow-wrap:anywhere}
+.study-copy-prose blockquote{margin:18px 0;border-left:3px solid #94a3b8;padding:0 0 0 16px}
+.study-copy-prose pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f1f5f9;padding:14px;font-size:13px}
+.study-copy-prose .katex{font-size:1.13em}
+.study-copy-prose .katex-display{overflow-x:auto;overflow-y:hidden;padding:8px 0;margin:18px 0}
+.study-copy-prose ul,.study-copy-prose ol{padding-left:24px}
+.study-copy-question{padding-left:16px;border-left:3px solid #dce0e5}
+.study-copy-record{border-top:1px solid #cbd5e1;padding-top:24px;font-size:14px}
+.study-copy-record details{font-size:13px}
+.study-copy-record summary{color:#0f766e}
+.study-copy-record dl{display:block}
+.study-copy-record dt{margin-top:14px;font-weight:600}
+.study-copy-record dd{font-family:monospace;font-size:12px;overflow-wrap:anywhere;margin:4px 0 0}
+.study-copy-sources{padding-left:24px}
+.study-copy-sources li{padding:0 0 18px 6px}
+.study-copy-sources h3{font-size:16px;font-weight:650;margin:0 0 5px;break-after:avoid}
+.study-copy-sources p{font-size:13px;margin:5px 0;overflow-wrap:anywhere}
+.study-source-warning{color:#854d0e}
+.study-source-version{color:#475569}
+.study-copy-footer{font-size:12px;color:#475569;line-height:1.5}
+.study-missing-image{color:#854d0e;font-size:14px}
+.study-copy-unavailable{max-width:650px;margin:15vh auto}
+.study-copy-unavailable h1{font-family:inherit;font-size:32px}
+.study-copy-paper a:focus-visible,.study-copy-toolbar a:focus-visible,.study-copy-toolbar button:focus-visible{outline:3px solid #0f766e;outline-offset:4px}
+@media(max-width:650px){.study-copy-shell{padding:12px}
+.study-copy-toolbar{align-items:flex-start;flex-direction:column;gap:12px}
+.study-print-action{text-align:left}
+.study-copy-paper{padding:28px 22px}
+.study-copy-heading h1{font-size:30px}
+.study-copy-contents{gap:10px 16px}
+}
+@media print{@page{size:letter;margin:18mm 17mm}
+.study-copy-shell{background:#fff;color:#000;padding:0;min-height:0}
+.study-copy-toolbar,.study-copy-contents{display:none!important}
+.study-copy-paper{padding:0;margin:0;max-width:none;width:100%;font-size:11.5pt;line-height:1.5}
+.study-copy-heading h1{font-size:25pt}
+.study-copy-heading{padding-bottom:16px}
+.study-copy-paper h2{font-size:17pt}
+.study-copy-prose h1,.study-copy-prose h2,.study-copy-prose h3{font-size:14pt}
+.study-copy-prose p,.study-copy-prose li{orphans:3;widows:3}
+.study-copy-prose .katex-display{overflow:visible;break-inside:avoid;font-size:calc(1em * var(--study-print-math-scale,1))}
+.study-copy-record,.study-copy-sources li{break-inside:avoid}
+.study-copy-record details{display:none}
+.study-copy-paper a{color:#111827}
+.study-copy-paper section{margin:24px 0}
+.study-copy-prose pre{break-inside:avoid}
+.study-copy-paper footer{font-size:9pt}
+}
+
+
+.study-copy-print-measure{position:fixed;left:-10000px;top:0;visibility:hidden;font-size:11.5pt;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+.study-copy-print-measure .katex{font-size:1.13em}
+.study-copy-print-measure .katex-display{font-size:1em}
+.study-print-blocker{display:none}
+.study-copy-prose table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse;margin:18px 0}
+.study-copy-prose th,.study-copy-prose td{padding:8px;border:1px solid #cbd5e1;vertical-align:top}
+.study-copy-prose th{text-align:left;background:#f1f5f9}
+
+@media print{.study-copy-prose table{display:table;width:100%;table-layout:fixed;overflow:visible;font-size:10pt}
+.study-copy-print-blocked .study-print-blocker,.study-copy-print-pending .study-print-blocker{display:block;border:2px solid #854d0e;padding:12px}
+.study-math-too-wide .katex{display:none}
+.study-math-too-wide::after{content:"Equation omitted: too wide for a readable print copy. Request shorter worked steps.";display:block;font:11pt/1.5 sans-serif;color:#854d0e}
+.study-copy-print-measure{display:none}
+}
+
+
+.study-copy-prose .study-row-step{border:0;padding:0;margin:18px 0}.study-copy-prose .study-row-step p{margin:0 0 12px}@media print{.study-row-step{break-inside:avoid}}
+
+@media print{.study-copy-prose .katex:not(.katex-display .katex){font-size:calc(1.13em * var(--study-print-math-scale,1))}.study-math-too-wide.katex > *{display:none}.study-math-too-wide.katex::after{white-space:normal}}
+
+.study-math-render-error{border-left:3px solid #854d0e;padding-left:12px;color:#854d0e;font-size:14px}

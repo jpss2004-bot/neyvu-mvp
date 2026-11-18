@@ -1,0 +1,15 @@
+'use client';
+import {useEffect,useState,useRef} from 'react';
+import {weekdays,validateAvailability,type SavedAvailability,type StudySlot} from '../../lib/beta/availability-format';
+import {useI18n} from './language';
+export default function StudyAvailabilityForm({saved,zone,onSave,onDirtyChange}:{saved:SavedAvailability|null;zone:string;onSave:(value:unknown)=>Promise<SavedAvailability>;onDirtyChange:(dirty:boolean)=>void}){
+ const request=useRef('');
+ const {t}=useI18n(),[base,setBase]=useState(saved),[slots,setSlots]=useState<StudySlot[]>(saved?.slots||[]),[dirty,setDirty]=useState(false),[busy,setBusy]=useState(false),[error,setError]=useState(''),[notice,setNotice]=useState('');
+ useEffect(()=>{if(!dirty){setSlots(saved?.slots||[]);setBase(saved);}},[saved?.id,saved?.revision,dirty]);
+ const edit=(next:StudySlot[])=>{request.current='';setSlots(next);setDirty(true);onDirtyChange(true);setNotice('');};
+ async function save(){setBusy(true);setError('');try{const value=validateAvailability({timezone:zone,slots});await onSave({...value,...(base?{id:base.id,revision:base.revision}:{}),request_id:request.current||(request.current=crypto.randomUUID())});setDirty(false);onDirtyChange(false);setNotice(t('Study availability saved. Ask for a new plan to use it.'));}catch(e){setError(e instanceof Error?e.message:t('Study availability could not save.'));}finally{setBusy(false);}}
+ return <details className="nu-availability"><summary>{t('Study availability')}{saved?' · '+t('Saved recurring schedule'):''}</summary><p>{t('Choose your usual study windows. Neyvu will exclude confirmed classes and labs when proposing a plan. These windows do not change course deadlines.')} {zone}</p>
+  {[1,2,3,4,5,6,0].map(day=><div className="nu-availability-day" key={day}><strong>{t(weekdays[day])}</strong>{slots.map((s,index)=>s.day===day?<div className="nu-availability-window" key={index}><label>{t('Start')}<input type="time" aria-label={t(weekdays[day])+' '+t('Start')} value={s.start} disabled={busy} onChange={e=>edit(slots.map((v,i)=>i===index?{...v,start:e.target.value}:v))}/></label><label>{t('End')}<input type="time" aria-label={t(weekdays[day])+' '+t('End')} value={s.end} disabled={busy} onChange={e=>edit(slots.map((v,i)=>i===index?{...v,end:e.target.value}:v))}/></label><button type="button" disabled={busy} onClick={()=>edit(slots.filter((_,i)=>i!==index))}>{t('Remove')}</button></div>:null)}{slots.filter(s=>s.day===day).length<2&&<button type="button" disabled={busy} onClick={()=>edit([...slots,{day,start:'16:00',end:'18:00'}])}>{t('Add study window')}</button>}</div>)}
+  <p>{t('No window on a day means no study time has been offered for that day.')}</p>{error&&<p role="alert">{t(error)}</p>}{notice&&<p role="status">{notice}</p>}<button type="button" disabled={busy||!dirty} onClick={save}>{t(busy?'Saving…':'Save study availability')}</button><button type="button" disabled={busy||!dirty} onClick={()=>{setSlots(saved?.slots||[]);setDirty(false);onDirtyChange(false);setError('');}}>{t('Discard schedule edits')}</button>
+ </details>;
+}

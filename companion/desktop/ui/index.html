@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:">
+  <title>Neyvu Companion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="mark" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 112" aria-hidden="true"><rect width="112" height="112" rx="20" fill="#fafcfd"/><g transform="translate(9 7) scale(.94)"><path fill="#195b65" d="M31 32C26 30 27 25 31 19C39 7 50 4 62 9C69 12 74 20 79 29C82 36 79 43 73 46C68 49 64 47 59 44Z"/><path fill="#2457cc" d="M19 45C25 35 38 33 41 45C43 54 40 65 42 75C42 84 45 88 48 92H26C10 90 3 80 5 64C7 57 13 49 19 45Z"/><path fill="#42a4ed" d="M53 68L85 48C96 65 98 76 90 85C84 92 78 93 68 93H62C46 93 43 77 53 68Z"/></g></svg>
+</div>
+    <div class="brand">Neyvu <small id="release">Companion for Acadia Moodle</small></div>
+  </header>
+  <main>
+    <nav aria-label="Setup progress">
+      <span id="step1"><b aria-hidden="true">1</b> Account</span>
+      <span id="step2"><b aria-hidden="true">2</b> Moodle</span>
+      <span id="step3"><b aria-hidden="true">3</b> Courses</span>
+      <span id="step4"><b aria-hidden="true">4</b> Vault</span>
+    </nav>
+    <section aria-labelledby="title">
+      <p class="state-label" id="eyebrow">Getting started</p>
+      <h1 id="title">Your courses, connected.</h1>
+      <p id="detail">Connect your Neyvu account, then sign in to Moodle.</p>
+      <div class="accounts">
+        <div id="account" hidden></div>
+        <div id="identity" hidden></div>
+      </div>
+
+      <aside id="activity" hidden aria-labelledby="activity-title">
+        <div class="activity-heading"><span class="activity-dot" aria-hidden="true"></span><h2 id="activity-title">Checking your connection</h2><span id="activity-elapsed"></span></div>
+        <p id="activity-message" role="status" aria-live="polite"></p>
+        <p id="activity-course" hidden></p>
+        <p id="activity-page" hidden></p>
+        <dl id="activity-metrics" hidden></dl>
+        <p id="activity-update"></p>
+        <p id="activity-wait" hidden></p>
+        <div class="activity-track" aria-hidden="true"><span></span></div>
+      </aside>
+
+      <fieldset id="course-selection" hidden>
+        <legend>Current lectures and labs</legend>
+        <p id="course-filter"></p>
+        <p>Check the courses you are taking now, including each separate lab. If In progress misses an active course, choose All in the Moodle window, then reload this list.</p>
+        <ul id="course-choice-list" aria-label="Courses to import"></ul>
+        <p id="course-selection-empty">No courses are visible in this filter. Choose All in Moodle and reload the list; only courses you select will be imported.</p>
+        <p id="course-selection-issues" role="status" hidden></p>
+        <p id="course-selection-count" role="status" aria-live="polite"></p>
+        <p class="hint">Already imported history stays saved. Your selection controls current work and future collection.</p>
+      </fieldset>
+
+      <div id="actions" aria-label="Connection actions"></div>
+      <p id="action-error" role="alert" hidden></p>
+      <button type="button" id="retry-status" class="secondary" hidden>Check connection status</button>
+
+      <aside id="course-coverage" hidden>
+        <h2 id="coverage-title">Saved course pages</h2>
+        <p id="coverage-detail">Compare these selected courses with Moodle, including each separate lab. You can change future collection with Choose current courses.</p>
+        <ul id="course-list"></ul>
+        <p id="listing-issues" hidden></p>
+        <p class="hint">Supported PDF, Word, PowerPoint and text originals are imported from verified visible Moodle links. Stored documents may still be waiting for readable text: check Sources and citations. Add a text copy for a scanned or encrypted handout.</p>
+      </aside>
+
+      <aside id="content-readiness" hidden>
+        <h2>Saved text and files</h2>
+        <p>Readable text can be used in source-backed answers. Page titles and stored files alone do not show that their contents were read.</p>
+        <dl id="readiness-metrics"></dl>
+        <p id="readiness-warning" hidden></p>
+        <ul id="readiness-limitations" hidden></ul>
+      </aside>
+
+      <details id="collection-gaps" hidden>
+        <summary id="collection-gaps-title">Material still to check</summary>
+        <p>These checks explain what was not fully read. Saved pages are kept. Some items can be retried; others need the original in Moodle.</p>
+        <p>A saved page count does not mean every activity or file was read. These items need another check.</p>
+        <ul id="collection-gap-list"></ul>
+      </details>
+      <details id="setup-checks" open>
+        <summary>Connection checks</summary>
+        <div id="checks" role="status" aria-live="polite"></div>
+      </details>
+      <p id="updated"></p>
+      <p id="next-refresh" hidden></p>
+      <details>
+        <summary>Connection diagnostic (safe to share)</summary>
+        <pre id="diagnostic"></pre>
+      </details>
+    </section>
+
+    <details id="retained-originals">
+      <summary>Retained PDF originals on this computer</summary>
+      <p>Review PDF originals kept by this copy of Neyvu, including earlier connections. Saving a copy keeps the retained original and does not change your website sources.</p>
+      <button type="button" id="review-originals" class="secondary">Review retained PDFs</button>
+      <p id="retained-wait" role="status" aria-live="polite" hidden></p>
+      <p id="retained-summary">Choose Review retained PDFs to check this computer.</p>
+      <p id="retained-message" role="status" aria-live="polite" hidden></p>
+      <p id="retained-error" role="alert" hidden></p>
+      <ul id="retained-list"></ul>
+      <p class="retained-note">A saved upload receipt records an earlier check. Current website versions are checked when you refresh; this recovery screen works locally.</p>
+    </details>
+
+    <details>
+      <summary>Prepare this laptop</summary>
+      <ol>
+        <li>Close old Companion and Moodle windows. On a Mac, open Neyvu Companion from Applications. On Windows, open Neyvu Companion from the Start menu after installing the qualified Store release.</li>
+        <li>Keep this laptop on power, awake and online, with the correct date and time. Use Microsoft Edge on Windows, or Edge or Google Chrome on a Mac.</li>
+        <li>Use your invited Google account and your own Moodle account. A saved connection can resume; reconnecting does not require deleting your vault.</li>
+        <li>Open My courses, choose In progress and clear its search. Confirm your identity, then review the checklist before importing. Use All to find a missing active lab or course. Make relevant sections visible.</li>
+      </ol>
+      <p>Read START HERE.txt for recovery steps. No Render or Vercel login is needed.</p>
+    </details>
+    <details>
+      <summary>How this connection works</summary>
+      <p>This Companion connects to Acadia Moodle. Your Moodle password and browser session stay on this computer account. Visible course text goes to your private Neyvu vault. The app never submits assignments or sends messages.</p>
+      <p>Leave the app and its Moodle window open for updates every twenty minutes. Closing either window or sleeping the laptop pauses collection. Your last saved material remains available.</p>
+      <p>This beta collects visible course and activity text, including linked forum discussions and book chapters. Each course check reads up to 100 activity, discussion and chapter pages, including up to 40 discussions, 10 forum index pages and 40 book chapters. Supported page, folder and book links can be followed two activity levels deeper. Verified Moodle PDF and text links can import originals, with up to 10 file attempts per course and 20 per refresh, a 10 MiB file limit and a 100 MiB refresh limit. PDF text extraction continues separately; check Sources for its current status.</p>
+      <p>Saved counts show collection progress. Readable text can be searched and cited; it does not show that the AI understands the whole course. Hidden or unloaded content, content beyond the limits, unsupported or external files and media, grades and submission receipts remain limitations. Scanned or encrypted originals may need a readable text copy. Named collection gaps report problems encountered; compare the saved text and originals with Moodle.</p>
+      <button type="button" id="reset" class="secondary" disabled>Disconnect this laptop</button>
+    </details>
+  </main>
+  <footer>Your account. Your Moodle. Your saved sources.</footer>
+  <script src="app.js"></script>
+</body>
+</html>

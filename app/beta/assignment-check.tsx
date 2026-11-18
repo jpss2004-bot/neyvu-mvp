@@ -1,0 +1,12 @@
+'use client';
+import {useEffect,useState} from 'react';
+import {useI18n} from './language';
+type Check={id:string;state:string;completed_at?:string|null};
+export default function AssignmentCheck({sourceId,onOpen}:{sourceId:string;onOpen:(id:string)=>void}){
+ const {t}=useI18n(),[check,setCheck]=useState<Check|null>(null),[busy,setBusy]=useState(false),[error,setError]=useState(''),[attempt,setAttempt]=useState(0);
+ async function call(op:string,signal?:AbortSignal){const r=await fetch('/api/beta/companion',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({op,source_id:sourceId}),signal});const data=await r.json();if(!r.ok)throw Error(data.error||'The assignment check could not be saved.');return data.check as Check|null;}
+ useEffect(()=>{let live=true,timer:ReturnType<typeof setTimeout>;const abort=new AbortController();async function poll(){try{const value=await call('check.status',abort.signal);if(!live)return;setCheck(value);setError('');if(value&&['queued','checking'].includes(value.state))timer=setTimeout(poll,5000);}catch(e){if(live)setError(e instanceof Error?e.message:'Check status is unavailable.');}}void poll();return()=>{live=false;abort.abort();clearTimeout(timer);};},[sourceId,check?.id,attempt]);
+ const waiting=!!check&&['queued','checking'].includes(check.state);
+ async function request(){setBusy(true);setError('');try{setCheck(await call('check.request'));}catch(e){setError(e instanceof Error?e.message:'The assignment check could not be saved.');}finally{setBusy(false);setAttempt(n=>n+1);}}
+ return <div className="nu-assignment-check"><button type="button" disabled={busy||waiting} onClick={request}>{t(busy?'Saving check…':waiting?'Moodle check queued':'Check this assignment in Moodle')}</button>{check&&<p role="status">{t(check.state==='complete'?'The current assignment page was saved. Review its status and instructions.':check.state==='expired'?'This check expired or your course selection changed. Request a new check.':check.state==='checking'?'Companion is checking this assignment. Your plan stays editable.':'Saved. Companion checks this after its current course. Keep Companion and Moodle open.')}{check.state==='complete'&&<button type="button" onClick={()=>onOpen(sourceId)}>{t('Open refreshed instructions')}</button>}</p>}{error&&<p role="alert">{t(error)} <button type="button" onClick={request} disabled={busy}>{t('Retry check')}</button></p>}</div>;
+}

@@ -1,0 +1,17 @@
+.beta-device-guide{max-width:1160px;margin:0 auto;padding:42px 0;color:inherit;scroll-margin-top:24px}
+.beta-device-guide h2{font-size:30px;line-height:1.15;letter-spacing:-.035em;margin:0 0 18px}
+.beta-device-guide>p{max-width:720px;font-size:15px;line-height:1.65;color:#c5c5ca}
+.beta-device-list{margin:28px 0;border-top:1px solid #303033}
+.beta-device-list details{border-bottom:1px solid #303033}
+.beta-device-list summary{cursor:pointer;min-height:68px;padding:18px 10px;line-height:1.5}
+.beta-device-list summary strong{font-weight:500;font-size:16px}
+.beta-device-list summary span{display:inline-block;font-size:13px;color:#aaaab1;margin-left:24px}
+.beta-device-list details>div{padding:0 10px 16px;max-width:740px}
+.beta-device-list p{font-size:14px;line-height:1.7;color:#c5c5ca}
+.beta-device-guide .beta-device-next{font-size:13px;color:#aaaab1}
+.beta-device-guide :focus-visible{outline:3px solid #7cb9ff;outline-offset:3px}
+@media(max-width:640px){.beta-device-guide{padding:28px 0}.beta-device-guide h2{font-size:27px}.beta-device-list summary span{display:block;margin:5px 0 0 20px}.beta-device-list summary{min-height:84px}}
+
+.beta-device-download{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border:1px solid currentColor;border-radius:8px;font-weight:600;color:inherit;text-decoration:none}
+.beta-device-download:hover{background:rgba(128,128,128,.12)}
+.beta-device-list h3{font-size:16px;line-height:1.4;margin:22px 0 8px}

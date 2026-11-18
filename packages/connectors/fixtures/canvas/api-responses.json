@@ -1,0 +1,186 @@
+{
+ "_note": "Synthetic recorded-shape Canvas REST v1 responses for tests and the demo (Synthetic University). No real institution, student or credential. Field names follow the public Canvas API docs (Users, Courses, Assignments, Pages, Files).",
+ "origin": "https://canvas.example.com",
+ "accessToken": "fixture-token-not-a-real-credential",
+ "expectedIdentity": "4001",
+ "responses": {
+  "/api/v1/users/self/profile": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": {
+    "id": 4001,
+    "name": "Sample Learner",
+    "short_name": "Sample",
+    "primary_email": "learner@example.com",
+    "time_zone": "America/Halifax"
+   }
+  },
+  "/api/v1/courses?enrollment_type=student&enrollment_state=active&per_page=100": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "link": "<https://canvas.example.com/api/v1/courses?enrollment_type=student&enrollment_state=active&page=2&per_page=100>; rel=\"next\", <https://canvas.example.com/api/v1/courses?enrollment_type=student&enrollment_state=active&page=1&per_page=100>; rel=\"first\""
+   },
+   "body": [
+    {
+     "id": 101,
+     "name": "Introductory Biology (sample)",
+     "course_code": "DEMO 1010",
+     "workflow_state": "available",
+     "enrollment_term_id": 12,
+     "time_zone": "America/Halifax"
+    }
+   ]
+  },
+  "/api/v1/courses?enrollment_type=student&enrollment_state=active&page=2&per_page=100": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "link": "<https://canvas.example.com/api/v1/courses?enrollment_type=student&enrollment_state=active&page=1&per_page=100>; rel=\"first\""
+   },
+   "body": [
+    {
+     "id": 205,
+     "name": "Data Literacy for Managers (corporate sample)",
+     "course_code": "L&D-DATA-01",
+     "workflow_state": "available",
+     "enrollment_term_id": 1
+    }
+   ]
+  },
+  "/api/v1/courses/101/assignments?per_page=100": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": [
+    {
+     "id": 7001,
+     "course_id": 101,
+     "name": "Lab 4: Enzyme kinetics report",
+     "description": "<p>Submit a 3-page report using the Lab 4 data sheet. Include a Lineweaver–Burk plot.</p>",
+     "due_at": "2026-11-14T03:59:00Z",
+     "updated_at": "2026-11-02T15:20:11Z",
+     "points_possible": 20,
+     "submission_types": [
+      "online_upload"
+     ],
+     "html_url": "https://canvas.example.com/courses/101/assignments/7001"
+    },
+    {
+     "id": 7002,
+     "course_id": 101,
+     "name": "Quiz 3 reading reflection",
+     "description": "<p>Read chapter 8 and post a 200-word reflection.</p>",
+     "due_at": "2026-11-19T16:00:00Z",
+     "updated_at": "2026-11-05T09:00:00Z",
+     "points_possible": 5,
+     "submission_types": [
+      "online_text_entry"
+     ],
+     "html_url": "https://canvas.example.com/courses/101/assignments/7002"
+    },
+    {
+     "id": 7003,
+     "course_id": 101,
+     "name": "Optional study guide",
+     "description": null,
+     "due_at": null,
+     "updated_at": "2026-10-30T12:00:00Z",
+     "points_possible": 0,
+     "submission_types": [
+      "none"
+     ],
+     "html_url": "https://canvas.example.com/courses/101/assignments/7003"
+    }
+   ]
+  },
+  "/api/v1/courses/101/pages?per_page=100": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": [
+    {
+     "page_id": 31,
+     "url": "lab-4-instructions",
+     "title": "Lab 4 instructions",
+     "created_at": "2026-10-28T12:00:00Z",
+     "updated_at": "2026-11-03T10:00:00Z",
+     "published": true,
+     "front_page": false
+    }
+   ]
+  },
+  "/api/v1/courses/101/pages/31": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": {
+    "page_id": 31,
+    "url": "lab-4-instructions",
+    "title": "Lab 4 instructions",
+    "created_at": "2026-10-28T12:00:00Z",
+    "updated_at": "2026-11-03T10:00:00Z",
+    "published": true,
+    "front_page": false,
+    "body": "<h2>Lab 4</h2><p>Bring your lab coat. Record absorbance every 30 s for 5 minutes. The report template is in Files.</p>"
+   }
+  },
+  "/api/v1/courses/101/files?per_page=100": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": [
+    {
+     "id": 551,
+     "display_name": "Lab 4 data sheet.pdf",
+     "filename": "lab4-data-sheet.pdf",
+     "content-type": "application/pdf",
+     "size": 184320,
+     "updated_at": "2026-11-01T08:00:00Z",
+     "url": "https://canvas.example.com/files/551/download?download_frd=1"
+    }
+   ]
+  },
+  "/api/v1/courses/205/assignments?per_page=100": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": [
+    {
+     "id": 9101,
+     "course_id": 205,
+     "name": "Module 2 case: dashboard critique",
+     "description": "<p>Critique the sample sales dashboard in 300 words.</p>",
+     "due_at": "2026-11-21T22:00:00Z",
+     "updated_at": "2026-11-06T13:00:00Z",
+     "points_possible": 10,
+     "submission_types": [
+      "online_text_entry"
+     ],
+     "html_url": "https://canvas.example.com/courses/205/assignments/9101"
+    }
+   ]
+  },
+  "/api/v1/courses/205/pages?per_page=100": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": []
+  },
+  "/api/v1/courses/205/files?per_page=100": {
+   "status": 200,
+   "headers": {
+    "content-type": "application/json; charset=utf-8"
+   },
+   "body": []
+  }
+ }
+}

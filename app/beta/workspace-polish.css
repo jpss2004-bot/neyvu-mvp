@@ -1,0 +1,150 @@
+/* Neyvu's existing palettes, with one surface and motion vocabulary. No new UI runtime. */
+.nu-workspace-polish,.nu-loading-layout{--nu-radius-panel:18px;--nu-radius-control:10px;--nu-motion-fast:160ms;--nu-motion-settle:240ms;--nu-ease:cubic-bezier(.2,.8,.2,1)}
+.beta-app.nu-workspace-polish :is(.beta-note-list,.beta-note-editor){border-radius:var(--nu-radius-panel);background:var(--beta-surface);border:1px solid var(--beta-line);box-shadow:0 3px 14px var(--beta-shadow)}
+.beta-app.nu-workspace-polish .beta-note-list{padding:16px}
+.beta-app.nu-workspace-polish .beta-note-list>button{border-radius:var(--nu-radius-control);transition:background-color var(--nu-motion-fast) var(--nu-ease),color var(--nu-motion-fast) var(--nu-ease)}
+.beta-app.nu-workspace-polish .beta-note-editor{padding:24px}
+.beta-app.nu-workspace-polish :is(.beta-source-course select,.beta-note-filter input,.beta-search){border-radius:var(--nu-radius-control)}
+.beta-app.nu-workspace-polish .beta-source-list>button{border-radius:12px;border:1px solid transparent;border-bottom-color:var(--beta-line);padding:16px 12px;margin:0 0 4px;transition:background-color var(--nu-motion-fast) var(--nu-ease),border-color var(--nu-motion-fast) var(--nu-ease)}
+.beta-app.nu-workspace-polish .beta-source-list>button:hover{background:var(--beta-surface);border-color:var(--beta-line)}
+.beta-app.nu-workspace-polish .beta-source-list>button:focus-visible{outline:2px solid var(--beta-accent);outline-offset:2px}
+.beta-app .nu-state-panel{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-width:0;width:100%;min-height:310px;padding:44px 28px;text-align:center;border:1px solid var(--beta-line);border-radius:18px;background:var(--beta-surface);overflow-wrap:anywhere}
+.beta-app .nu-state-glyph{display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:18px;background:var(--beta-paper);color:var(--beta-muted);border:1px solid var(--beta-line);margin-bottom:6px;flex:none}
+.beta-app .nu-state-panel :is(h1,h2,h3){font-size:22px;line-height:1.25;font-weight:600;letter-spacing:-.025em;margin:0;max-width:30ch}
+.beta-app .nu-state-panel p{font-size:15px;line-height:1.65;color:var(--beta-muted);max-width:43ch;margin:0;padding:0}
+.beta-app .nu-state-actions{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px;margin-top:10px}
+.beta-app .nu-state-actions button,.beta-app .nu-state-actions>a{min-height:44px;border:1px solid var(--beta-line);border-radius:10px;padding:10px 16px;font-size:14px;font-weight:550;background:var(--beta-paper);color:var(--beta-ink);cursor:pointer;transition:background-color 160ms ease,border-color 160ms ease}
+.beta-app .nu-state-actions button:hover,.beta-app .nu-state-actions>a:hover{background:var(--beta-selected);border-color:var(--beta-accent)}
+.beta-app .nu-state-actions :focus-visible{outline:2px solid var(--beta-accent);outline-offset:3px}
+.beta-app .nu-state-panel.nu-state-compact{min-height:0;padding:28px 16px;gap:10px;background:transparent;border:0;border-radius:12px;box-shadow:none}
+.beta-app .nu-state-compact .nu-state-glyph{width:44px;height:44px;border-radius:13px;margin:0}
+.beta-app .nu-state-compact h3{font-size:16px;letter-spacing:-.015em}
+.beta-app .nu-state-compact p{font-size:13px;max-width:38ch}
+.beta-app .nu-state-panel[data-state="error"]{border-style:dashed}
+.beta-app .nu-search-activity{display:flex;align-items:center;gap:10px;color:var(--beta-muted);font-size:14px;margin:14px 0}
+.nu-search-activity>span{width:14px;height:14px;border:2px solid var(--beta-line);border-top-color:var(--beta-accent);border-radius:50%;animation:nu-search-turn 1s linear infinite;flex:none}
+@keyframes nu-search-turn{to{transform:rotate(360deg)}}
+.beta-app .nu-search-caption{font-size:13px;color:var(--beta-muted);margin:10px 0 0;overflow-wrap:anywhere}
+.beta-opening.nu-workspace-opening.nu-loading-layout{max-width:880px;width:100%;padding:32px;min-width:0}
+.nu-loading-layout .nu-activity-mark{width:44px;height:44px;margin-bottom:20px}
+.nu-workspace-skeleton{width:100%;padding:24px;margin:24px 0;border:1px solid var(--beta-line);border-radius:18px;background:var(--beta-surface);overflow:hidden}
+.nu-skeleton-heading{display:grid;gap:10px;margin-bottom:28px}
+.nu-skeleton-heading>span,.nu-skeleton-reading>span,.nu-skeleton-list b,.nu-skeleton-list i{display:block;background:var(--beta-line);opacity:.45;border-radius:6px;position:relative;overflow:hidden}
+.nu-skeleton-heading>span{height:12px;width:42%}.nu-skeleton-heading>span+span{width:68%;height:8px}
+.nu-skeleton-content{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;min-width:0}
+.nu-skeleton-list{display:grid;gap:22px}.nu-skeleton-list>div{display:flex;align-items:center;gap:12px;min-width:0}.nu-skeleton-list i{width:32px;height:36px;border-radius:8px;flex:none}.nu-skeleton-list span{flex:1;display:grid;gap:8px}.nu-skeleton-list b{height:8px;width:85%}.nu-skeleton-list b+b{width:58%;height:6px}
+.nu-skeleton-reading{display:flex;flex-direction:column;gap:12px;padding-left:24px;border-left:1px solid var(--beta-line)}.nu-skeleton-reading>span{height:8px;width:100%}.nu-skeleton-reading>span:first-child{width:55%;height:12px;margin-bottom:8px}.nu-skeleton-reading>span:last-child{width:72%}
+.nu-workspace-skeleton :is(b,i,.nu-skeleton-heading>span,.nu-skeleton-reading>span)::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--beta-ink) 16%,transparent),transparent);transform:translateX(-100%);animation:nu-skeleton-sweep 1.8s ease-in-out infinite}
+@keyframes nu-skeleton-sweep{to{transform:translateX(100%)}}
+[data-motion-paused] .nu-workspace-skeleton *::after{animation-play-state:paused!important}
+@media(max-width:700px){.beta-app.nu-workspace-polish .beta-note-editor{padding:18px}.beta-app .nu-state-panel{padding:32px 20px;min-height:270px}.beta-opening.nu-workspace-opening.nu-loading-layout{padding:24px 4px}.nu-workspace-skeleton{padding:20px}.nu-skeleton-content{grid-template-columns:1fr}.nu-skeleton-reading{display:none}.nu-skeleton-heading>span{width:60%}.nu-skeleton-heading>span+span{width:85%}}
+@media(prefers-reduced-motion:reduce){.nu-workspace-skeleton *::after,.nu-search-activity>span{animation:none!important}.nu-workspace-polish *{transition-duration:0s!important}}
+html[data-neyvu-motion="reduce"] .nu-workspace-skeleton *::after,html[data-neyvu-motion="reduce"] .nu-search-activity>span{animation:none!important}
+html[data-neyvu-motion="reduce"] .nu-workspace-polish *{transition-duration:0s!important}
+@media(prefers-contrast:more){.beta-app .nu-state-panel,.nu-workspace-skeleton,.beta-app.nu-workspace-polish :is(.beta-note-list,.beta-note-editor){border-color:var(--beta-ink);box-shadow:none}.nu-workspace-skeleton :is(b,i,span){opacity:.75}}
+html[data-neyvu-contrast="high"] :is(.nu-state-panel,.nu-workspace-skeleton){border-color:var(--beta-ink);box-shadow:none}
+@media(forced-colors:active){.nu-state-glyph,.nu-state-panel,.nu-workspace-skeleton{border:1px solid CanvasText}.nu-workspace-skeleton :is(b,i,.nu-skeleton-heading>span,.nu-skeleton-reading>span){background:GrayText}.nu-workspace-skeleton *::after{display:none}}
+/* A saved-note list is a pane, not the full-height application sidebar. */
+.beta-app.nu-workspace-polish .beta-notebook-grid{height:auto;min-height:360px;align-items:stretch}
+.beta-app.nu-workspace-polish .beta-note-list{position:static;inset:auto;height:auto;max-height:600px;align-self:stretch}
+.beta-app.nu-workspace-polish .beta-notebook-grid>.nu-state-panel{height:auto;min-height:360px;margin:0}
+.beta-app.nu-workspace-polish .beta-note-editor{height:auto;min-height:440px}
+@media(max-width:700px){.beta-app.nu-workspace-polish .beta-notebook-grid{min-height:0}.beta-app.nu-workspace-polish .beta-note-list{max-height:280px}.beta-app.nu-workspace-polish .beta-notebook-grid>.nu-state-panel{min-height:280px}.beta-app.nu-workspace-polish .beta-note-editor{min-height:360px}}
+/* In a stacked Notebook, the editor's first-use guidance already supplies the next action. */
+@media(max-width:1000px){.beta-app.nu-workspace-polish .beta-note-list .nu-state-panel[data-state="notes"]{display:none}}
+
+/* Keep recovered questions readable within the composer on narrow screens. */
+.beta-draft-recovery pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:12rem;overflow:auto;font:inherit;}
+.beta-draft-recovery summary{color:inherit;}
+
+/* Student conversation: stable text and restrained, truthful activity. */
+.nu-opening-inline{display:flex;align-items:center;gap:12px;padding:28px 32px;min-height:88px;color:var(--beta-muted,#aeb4c4)}
+.nu-opening-inline p{margin:0;font-size:15px}.nu-opening-inline .nu-activity-mark{width:22px;height:22px}.nu-opening-inline .nu-activity-mark img{width:18px;height:18px}
+.beta-assistant-feedback.nu-compact-feedback{display:flex;align-items:flex-start;gap:10px;max-width:760px;margin:12px auto 24px;padding:4px 0;border:0;border-radius:0;background:transparent;box-shadow:none;min-height:32px}
+.nu-chat-status-dot{width:7px;height:7px;flex:0 0 7px;margin-top:7px;border-radius:50%;background:var(--beta-muted)}
+.nu-compact-feedback[data-active]>.nu-chat-status-dot{background:var(--desk-action,var(--beta-accent));animation:nu-chat-status-pulse 2s ease-in-out infinite}
+.nu-compact-feedback[data-motion-paused]>.nu-chat-status-dot{animation:none}
+@keyframes nu-chat-status-pulse{50%{opacity:.45}}
+@media(prefers-reduced-motion:reduce){.nu-compact-feedback[data-active]>.nu-chat-status-dot{animation:none}}
+@media(forced-colors:active){.nu-chat-status-dot{background:CanvasText;forced-color-adjust:none}}
+.nu-inline-feedback-copy{min-width:0;font-size:14px;line-height:1.55}.nu-inline-feedback-copy strong{font-size:14px;font-weight:500}.nu-inline-feedback-copy p{margin:5px 0;max-width:70ch}.nu-inline-feedback-copy time{display:block;color:var(--beta-muted,#aeb4c4);font-size:12px}
+.nu-feedback-details{margin-top:4px;font-size:12px;color:var(--beta-muted,#aeb4c4)}.nu-feedback-details summary{cursor:pointer}.nu-feedback-details ul{padding-left:18px}.nu-feedback-details button,.nu-inline-feedback-copy>button{font:inherit;padding:5px 8px}
+.beta-answer-draft{white-space:normal;overflow-wrap:anywhere}
+@media(prefers-reduced-motion:reduce){.nu-opening-inline .nu-activity-orbit,.nu-compact-feedback .nu-activity-orbit{animation:none}}
+/* Owner workflow: room for the answer, with its original alongside. */
+.beta-app.nu-workspace-polish .beta-composer{padding-top:8px;gap:6px}
+.beta-app.nu-workspace-polish .beta-composer textarea{min-height:48px;padding:12px 48px 8px 14px;line-height:1.45}
+.beta-app.nu-workspace-polish .beta-composer .beta-selects{padding:0 12px 8px;gap:8px}
+.beta-app.nu-workspace-polish .beta-nav nav a{min-height:40px;padding-block:8px}
+.beta-app.nu-workspace-polish .beta-nav .beta-history{margin-top:20px}
+.beta-app.nu-workspace-polish .nu-plan-table{overflow:auto;max-width:100%;margin:18px 0}
+.nu-plan-table table{width:100%;border-collapse:collapse;text-align:left;font-size:14px;line-height:1.5}
+.nu-plan-table :is(th,td){padding:12px 10px;border-bottom:1px solid var(--beta-line);vertical-align:top;min-width:110px}
+.nu-plan-table th{font-weight:600;color:var(--beta-muted)}
+.nu-plan-table td p{margin:0!important}.nu-plan-table td:nth-child(3){min-width:230px}
+.nu-preparation-sources details{border-block-start:1px solid var(--beta-line);margin:12px 0;padding:12px 0}
+.nu-preparation-sources summary{cursor:pointer;color:var(--beta-accent);font-weight:600}
+.nu-preparation-sources summary p{display:inline;margin:0!important}
+.nu-source-resize{display:none}.beta-app .nu-source-panel>section{min-width:0}
+.beta-app .nu-source-text{white-space:pre-wrap;overflow-wrap:anywhere;font-family:inherit;font-size:15px;line-height:1.75}
+.nu-source-text mark{color:var(--beta-ink);background:var(--beta-selected);box-shadow:0 0 0 3px var(--beta-selected);border-left:2px solid var(--beta-accent)}
+.nu-source-location-note{padding:12px;border-left:2px solid var(--beta-warning-line);font-size:14px;color:var(--beta-muted)}
+.nu-availability{border-bottom:1px solid var(--beta-line);margin:12px 0 24px;padding:12px 0}
+.nu-availability summary{cursor:pointer;font-weight:600}.nu-availability>p{font-size:14px;color:var(--beta-muted);max-width:70ch}
+.nu-availability-day{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid var(--beta-line)}
+.nu-availability-day>strong{min-width:95px;font-size:14px}.nu-availability-window{display:flex;align-items:end;flex-wrap:wrap;gap:8px}
+.nu-availability-window label{display:flex;flex-direction:column;gap:3px;font-size:13px}.nu-availability-window input{background:var(--beta-paper);color:var(--beta-ink);border:1px solid var(--beta-line);border-radius:8px;padding:8px}
+@media(min-width:1100px){
+ .beta-app.nu-source-open .beta-main{margin-right:var(--nu-source-width,440px)}
+ .beta-app .beta-source-overlay.nu-source-panel[open]{position:fixed;inset:0 0 0 auto;margin:0;width:var(--nu-source-width,440px);height:100dvh;max-height:100dvh;max-width:none;border:0;border-left:1px solid var(--beta-line);border-radius:0;padding:0;background:var(--beta-paper);color:var(--beta-ink);overflow:visible;box-shadow:none}
+ .beta-app .nu-source-panel>section{height:100%;overflow:auto;padding:20px 24px}
+ .beta-app .nu-source-panel .beta-source-header{position:relative;top:auto;padding:0 0 16px;background:var(--beta-paper)}
+ .beta-app .nu-source-panel .beta-source-header h2{font-size:20px;line-height:1.3}
+ .beta-app .nu-source-resize{display:block;position:absolute;left:-6px;top:0;bottom:0;width:12px;cursor:col-resize;touch-action:none;z-index:2}
+ .nu-source-resize:hover,.nu-source-resize:focus-visible{background:var(--beta-accent);outline:2px solid var(--beta-accent);outline-offset:-2px;opacity:.55}
+ .beta-app.nu-source-open .nu-chat-workspace-study{grid-template-columns:minmax(0,1fr)}
+ .beta-app.nu-source-open .nu-chat-workspace-study .nu-study-session{max-height:320px}
+}
+@media(max-width:600px){.beta-app.nu-workspace-polish .beta-composer textarea{min-height:44px;font-size:16px}.nu-plan-table :is(th,td){padding:10px 8px}.nu-availability-day{align-items:start}.nu-availability-window{gap:6px}}
+.beta-app.nu-workspace-polish .beta-composer-controls{gap:6px;padding-block:2px}
+.beta-app.nu-workspace-polish .beta-composer-options{gap:8px;flex-wrap:wrap}
+.beta-app.nu-workspace-polish .beta-freshness{margin:6px 0;padding:6px 10px;font-size:12px}
+.beta-app.nu-workspace-polish .nu-onboarding:not([open]){margin:4px 0;padding:6px 0;font-size:12px}
+.beta-app.nu-workspace-polish .beta-history a{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+.beta-app.nu-workspace-polish .beta-history a small{font-size:11px;color:var(--beta-muted);line-height:1.35}
+@media(min-width:1100px){.beta-app .nu-source-panel .beta-source-header{position:sticky;top:-20px;z-index:1;border-bottom:1px solid var(--beta-line)}}
+@media(max-width:600px){
+ .beta-app.nu-workspace-polish .nu-plan-table{overflow:visible}
+ .nu-plan-table table,.nu-plan-table tbody,.nu-plan-table tr,.nu-plan-table td{display:block;width:100%;min-width:0!important;box-sizing:border-box}
+ .nu-plan-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .nu-plan-table tbody{display:grid;gap:14px}
+ .nu-plan-table tbody tr{border:1px solid var(--beta-line);border-radius:12px;padding:4px 14px;background:var(--beta-paper)}
+ .nu-plan-table td{padding:12px 0!important;overflow-wrap:anywhere;max-width:100%;border:0}
+ .nu-plan-table td+td{border-top:1px solid var(--beta-line)}
+ .nu-plan-table td::before{content:attr(data-label);display:block;color:var(--beta-muted);font-size:12px;font-weight:600;margin-bottom:6px}
+ .nu-plan-table td:first-child{font-size:16px;font-weight:600}
+ .nu-plan-table td:first-child::before{display:none}
+ .nu-plan-table td details{margin:10px 0 0}
+}
+
+.nu-progress-check{border-left:2px solid var(--beta-accent);padding:4px 14px;margin:16px 0}.nu-progress-check>div{display:flex;gap:8px;flex-wrap:wrap}.nu-progress-check small{display:block;margin-top:8px;color:var(--beta-muted)}
+.nu-revision-comparison{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:18px 0 8px;border-block:1px solid var(--beta-line);padding:16px 0}
+.nu-revision-comparison>div{min-width:0}.nu-revision-comparison .nu-revision-label{font-weight:650;font-size:13px;margin:0 0 10px;color:var(--beta-muted)}
+.nu-revision-comparison .nu-revision-text{white-space:pre-wrap;overflow-wrap:anywhere;margin:0;line-height:1.7}
+.nu-revision-comparison del{color:var(--beta-ink);background:color-mix(in srgb,#b42318 13%,transparent);text-decoration-thickness:1px}
+.nu-revision-comparison ins{color:var(--beta-ink);background:color-mix(in srgb,var(--beta-accent) 14%,transparent);text-underline-offset:3px;text-decoration-thickness:2px}
+.nu-revision-legend{font-size:12px;color:var(--beta-muted);margin:0 0 18px}
+@media(max-width:1100px){.nu-revision-comparison{grid-template-columns:1fr}}
+
+/* The same compact, truthful read indicator in pages, search and refresh. */
+.nu-activity-line{display:flex;align-items:center;gap:16px;min-height:54px;padding:8px 2px;color:var(--beta-muted,#52657a);max-width:100%}
+.nu-activity-line>.nu-activity-mark{display:grid;place-items:center;position:relative;isolation:isolate;width:28px;height:28px;flex:none;margin:6px}
+.nu-activity-line .nu-activity-orbit{position:absolute;inset:-5px;border:1.5px solid var(--beta-line,#d9e2ef);border-top-color:var(--beta-accent,#2457cc);border-right-color:var(--beta-cyan,#0c8f9d);border-radius:50%;animation:nu-search-turn 1.6s linear infinite}
+.nu-activity-line>div{min-width:0}.nu-activity-line p{margin:0!important;font-size:14px!important;line-height:1.6!important;color:var(--beta-ink,#19243a)}
+.nu-activity-line small{display:block;font-size:12px;line-height:1.7;margin-top:4px;max-width:58ch}
+.nu-activity-pause{display:grid;place-items:center;border:0!important;background:transparent!important;color:var(--beta-muted)!important;min-width:44px;min-height:44px;margin-left:auto;flex:none}
+.nu-opening-inline{padding:26px 6px}.nu-opening-inline .nu-activity-mark{width:28px;height:28px}.nu-opening-inline .nu-activity-mark img{width:24px;height:24px}
+.nu-activity-line[data-motion-paused] .nu-activity-orbit{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){.nu-activity-line .nu-activity-orbit{animation:none!important}}
+html[data-neyvu-motion="reduce"] .nu-activity-line .nu-activity-orbit{animation:none!important}
+@media(forced-colors:active){.nu-activity-line .nu-activity-orbit{border-color:GrayText;border-top-color:Highlight}}

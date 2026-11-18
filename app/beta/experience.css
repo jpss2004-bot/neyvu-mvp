@@ -1,0 +1,186 @@
+/* Neyvu: focused study, accessible reading and explicit saved-information scopes. */
+.nu-account-menu{position:relative}.nu-account-menu>summary{display:flex;gap:7px;align-items:center;min-height:44px;cursor:pointer;padding:8px 10px;border-radius:7px;list-style:none;font-size:14px}.nu-account-menu>summary::-webkit-details-marker{display:none}.nu-account-menu[open]>summary{background:var(--beta-selected)}.nu-account-content{position:absolute;right:0;top:calc(100% + 8px);width:260px;padding:18px;display:grid;gap:14px;z-index:50;background:var(--beta-paper);border:1px solid var(--beta-line);border-radius:18px;box-shadow:0 16px 48px var(--beta-shadow)}.nu-account-content>strong{font-size:14px;overflow-wrap:anywhere}.nu-account-content>a{display:flex;align-items:center;gap:9px;text-decoration:none;min-height:44px;padding:8px;color:var(--beta-ink);border-radius:5px}.nu-account-content>a:hover{background:var(--beta-selected)}.nu-account-content .beta-appearance{margin:0;width:100%}.nu-account-content .beta-appearance select{max-width:none;width:100%}.nu-account-content button{justify-content:flex-start}.beta-app :is(.nu-account-menu,.nu-settings,.nu-study-panel,.nu-memory-dialog) :focus-visible{outline:2px solid var(--beta-accent);outline-offset:3px}
+.nu-background-progress{display:flex;justify-content:flex-end;margin:0 0 16px}.beta-app .nu-background-progress>button{display:flex;flex-wrap:wrap;gap:9px;align-items:center;min-height:44px;font-size:13px;background:var(--beta-surface);border:1px solid var(--beta-line)}.nu-background-progress>button>span:last-child{color:var(--beta-accent)}
+.nu-settings{max-width:960px;margin:0 auto}.beta-app .nu-settings-scope{font-size:14px;line-height:1.65;color:var(--beta-muted);margin:20px 0 28px;max-width:72ch}.nu-settings-group{display:grid;grid-template-columns:minmax(180px,.7fr) minmax(0,1.4fr);gap:40px;border-top:1px solid var(--beta-line);padding:28px 0}.beta-app .nu-settings-group h2{font-size:19px;margin:0 0 8px;line-height:1.4}.beta-app .nu-settings-group p{font-size:14px;line-height:1.7;margin:0;color:var(--beta-muted);max-width:68ch}.nu-settings-controls{display:grid;gap:18px;min-width:0}.beta-app .nu-settings-controls label{display:grid;gap:8px;margin:0;font-size:14px}.nu-settings select,.nu-study-panel :is(input,select,textarea),.nu-memory-scope select{width:100%;padding:10px 12px;min-height:44px;font:inherit;color:var(--beta-ink);background:var(--beta-surface);border:1px solid var(--beta-line);border-radius:7px;margin:0;min-width:0}.nu-settings select{max-width:380px}.nu-settings-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.nu-privacy-row{padding-bottom:22px;border-bottom:1px solid var(--beta-line)}.beta-app .nu-privacy-row h3{font-size:16px;margin:0 0 8px}.nu-privacy-row>button{margin-top:14px}.nu-settings details{font-size:14px;line-height:1.7}.nu-settings details>summary{cursor:pointer;min-height:44px;color:var(--beta-accent)}.nu-settings details>p{margin:10px 0}.nu-settings a{color:var(--beta-accent)}.nu-settings-status{font-size:14px;min-height:22px;margin:0 0 8px;color:var(--beta-success)}
+.nu-memory-dialog{position:fixed;inset:0;margin:auto;width:min(720px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;overscroll-behavior:contain;padding:28px;border:1px solid var(--beta-line);border-radius:24px;background:var(--beta-paper);color:var(--beta-ink);box-shadow:0 24px 80px var(--beta-shadow)}.nu-memory-dialog::backdrop{background:#07111cb3;backdrop-filter:blur(3px)}.nu-memory-dialog>header{display:flex;align-items:start;gap:20px;justify-content:space-between;margin-bottom:24px}.beta-app .nu-memory-dialog h2{font-size:23px;line-height:1.3;margin:0 0 7px}.nu-memory-dialog header p{font-size:14px;color:var(--beta-muted);margin:0}.nu-memory-scope{display:grid;gap:8px;font-size:14px;margin:0 0 20px}.nu-memory-dialog .beta-student-memory[open]{max-height:none;overflow:visible;border:0;padding:0}.nu-memory-dialog .beta-student-memory summary{display:none}.nu-memory-dialog .beta-memory-list{max-height:none}.nu-memory-dialog .beta-memory-item{padding:14px;border:1px solid var(--beta-line);border-radius:8px;margin:12px 0;background:var(--beta-surface)}.beta-app .nu-memory-entry{font-size:13px;align-self:flex-start;min-height:44px;margin:4px 0;background:transparent;border:0;color:var(--beta-accent)}
+.nu-study-resume{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;margin:12px 0 24px;border:1px solid var(--beta-line);border-left:3px solid var(--beta-accent);border-radius:8px;background:var(--beta-surface)}.nu-study-resume>div{min-width:0}.nu-study-resume p{margin:0;font-size:14px;overflow-wrap:anywhere}.nu-study-resume small{color:var(--beta-muted)}.nu-study-panel{max-width:850px;min-width:0;margin:12px auto 32px;line-height:1.7}.nu-study-heading{display:flex;align-items:start;gap:16px;justify-content:space-between;border-bottom:1px solid var(--beta-line);padding:0 0 22px}.beta-app .nu-study-context{font-size:13px;color:var(--beta-accent);margin:0 0 7px}.beta-app .nu-study-heading h1{font-size:30px;line-height:1.2;letter-spacing:-.03em;margin:0}.beta-app .nu-study-question{font-size:20px;line-height:1.5;margin:24px 0 10px;max-width:65ch}.beta-app .nu-study-save{font-size:12px;color:var(--beta-muted);margin-bottom:24px;max-width:75ch}.nu-study-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:24px 0;border:0;padding:0;min-width:0}.nu-study-choices legend{font-size:15px;font-weight:600;margin-bottom:12px}.beta-app .nu-study-choices>button{display:block;padding:14px;text-align:left;font-size:15px;white-space:normal;line-height:1.5;background:var(--beta-surface);border:1px solid var(--beta-line);border-radius:8px}.nu-study-choices small{display:block;margin-top:6px;font-size:12px;color:var(--beta-muted);font-weight:400}.beta-app .nu-study-choices>button[aria-pressed=true]{border-color:var(--beta-accent);box-shadow:inset 0 0 0 1px var(--beta-accent);background:var(--beta-selected);color:var(--beta-accent)}.beta-app .nu-study-panel label{display:grid;gap:7px;font-size:14px;margin:18px 0;min-width:0}.nu-study-panel label:has(select){max-width:400px}.nu-study-panel textarea{resize:vertical}.nu-study-evidence{font-size:13px;color:var(--beta-muted)}.beta-app .nu-study-panel .beta-primary{background:var(--beta-accent-solid);border-color:var(--beta-accent-solid);color:var(--beta-on-accent)}.nu-study-response,.nu-study-wait{margin:28px 0;padding:22px;border:1px solid var(--beta-line);border-radius:9px;background:var(--beta-surface)}.beta-app .nu-study-panel h2{font-size:19px;margin:0 0 16px;line-height:1.4}.beta-app .nu-study-panel h3{font-size:16px;line-height:1.5}.nu-study-answer{font-size:16px;line-height:1.8;overflow-wrap:anywhere}.nu-study-answer p{white-space:normal}.nu-study-answer details{border-top:1px solid var(--beta-line);padding:10px 0;margin-top:18px}.nu-study-answer summary,.nu-study-review summary{cursor:pointer;color:var(--beta-accent);min-height:44px;align-content:center}.nu-study-answer details>button{display:block;text-align:left;white-space:normal;margin:8px 0;min-height:44px}.nu-study-panel .katex-display{overflow-x:auto;overflow-y:hidden;padding-block:6px}.nu-study-panel .beta-evidence-change{font-size:13px;line-height:1.6}.nu-study-comparison{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px;margin:28px 0}.nu-study-comparison>section{min-width:0;padding:20px;border:1px solid var(--beta-line);border-radius:9px;background:var(--beta-surface)}.nu-study-comparison>section>p{white-space:pre-wrap;overflow-wrap:anywhere}.nu-study-actions{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}.nu-study-review{margin:30px 0}.nu-study-review dl{display:grid;gap:16px;margin:20px 0}.nu-study-review dt{font-size:12px;color:var(--beta-muted)}.nu-study-review dd{font-size:16px;margin:3px 0;overflow-wrap:anywhere}.nu-study-review>p{font-size:14px;color:var(--beta-muted)}.nu-study-next{margin-top:30px;border-top:1px solid var(--beta-line);padding-top:20px}.nu-study-next small{display:block;color:var(--beta-muted);font-size:12px;margin-top:10px}.beta-app .nu-study-entry{margin-top:18px;min-height:44px;font-size:14px;color:var(--beta-accent);border:1px solid var(--beta-line)}
+/* Explicit sizes also enlarge existing pixel-sized workspace controls and content. */
+html[data-neyvu-text=large] .beta-app{--nu-reading:18px;--nu-control:16px;--nu-small:14px;--nu-heading:24px}html[data-neyvu-text=larger] .beta-app{--nu-reading:20px;--nu-control:18px;--nu-small:16px;--nu-heading:27px}
+html:is([data-neyvu-text=large],[data-neyvu-text=larger]) .beta-app :is(p,li,dd,pre,.beta-note-editor textarea[name=note-body],.beta-message-assistant,.nu-study-answer){font-size:var(--nu-reading)!important;line-height:1.75}
+html:is([data-neyvu-text=large],[data-neyvu-text=larger]) .beta-app :is(button,input,select,textarea,label,summary,.beta-nav a,.nu-account-content a){font-size:var(--nu-control)!important;line-height:1.5}
+html:is([data-neyvu-text=large],[data-neyvu-text=larger]) .beta-app :is(small,dt,.nu-evidence-label){font-size:var(--nu-small)!important;line-height:1.65}
+html:is([data-neyvu-text=large],[data-neyvu-text=larger]) .beta-app h2{font-size:var(--nu-heading)!important;line-height:1.4}
+html[data-neyvu-contrast=high] .beta-app{--beta-ink:#fff;--beta-muted:#dedee7;--beta-line:#83838d;--beta-accent:#c2efda;--beta-selected:#353e39;--beta-warning-text:#fff0c9;--beta-warning-line:#c7ae78;--beta-danger:#ffcaca}
+html[data-schoolvault-theme=light][data-neyvu-contrast=high] .beta-app{--beta-ink:#111719;--beta-muted:#303a40;--beta-line:#646d74;--beta-accent:#164b38;--beta-selected:#e5ebe7;--beta-warning-text:#493010;--beta-warning-line:#927138;--beta-danger:#851830}
+@keyframes nu-panel-enter{from{opacity:.4;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+html:not([data-neyvu-motion=reduce]) .beta-app :is(.nu-account-content,.nu-study-panel,.nu-memory-dialog[open],.beta-source-overlay[open],.beta-calendar-activity-dialog[open]){animation:nu-panel-enter 240ms cubic-bezier(.2,.8,.2,1) both}
+html:not([data-neyvu-motion=reduce]) .beta-app :is(button,a,summary,select){transition:background-color 160ms ease,border-color 160ms ease,color 160ms ease,box-shadow 180ms ease}
+html:not([data-neyvu-motion=reduce]) .beta-app .nu-study-choices button{transition:background-color 180ms ease,border-color 180ms ease,box-shadow 180ms ease,transform 180ms ease}.nu-study-choices button[aria-pressed=true]{transform:translateY(-2px)}
+html[data-neyvu-motion=reduce] .beta-app *,html[data-neyvu-motion=reduce] .beta-app *::before,html[data-neyvu-motion=reduce] .beta-app *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}html[data-neyvu-motion=reduce] .beta-app .nu-study-choices button[aria-pressed=true]{transform:none}
+@media(prefers-reduced-motion:reduce){html:not([data-neyvu-motion=full]) .beta-app *,html:not([data-neyvu-motion=full]) .beta-app *::before,html:not([data-neyvu-motion=full]) .beta-app *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:900px){.nu-settings-group{grid-template-columns:1fr;gap:20px}.nu-study-comparison{grid-template-columns:1fr}.beta-notebook-grid{display:flex;flex-direction:column;height:auto}.beta-note-list{max-height:300px}}
+@media(max-width:700px){.nu-study-heading{flex-direction:column;gap:16px}.nu-study-choices{grid-template-columns:1fr}.beta-app .nu-study-heading h1{font-size:26px}.nu-study-resume{flex-direction:column;align-items:start}.nu-study-response,.nu-study-wait{padding:18px 14px}.nu-memory-dialog{padding:22px 18px}.nu-memory-dialog>header{gap:12px}.beta-app .nu-memory-dialog h2{font-size:21px}.beta-top-tools>small{display:none}.nu-account-content{width:min(260px,calc(100vw - 32px))}.nu-study-panel label:has(select){max-width:none}.nu-background-progress{justify-content:flex-start}.nu-settings-group{padding:24px 0}.nu-settings select{max-width:none}}
+
+.nu-memory-confirm{padding:18px;border:2px solid var(--beta-warning-line);border-radius:8px;background:var(--beta-warning-surface);color:var(--beta-warning-text);margin:20px 0}.beta-app .nu-memory-confirm h3{font-size:17px;margin:0 0 10px}.nu-memory-confirm>div{display:flex;gap:10px;flex-wrap:wrap}.beta-app .nu-memory-confirm button{border:1px solid var(--beta-warning-line);min-height:44px}
+
+.beta-app :is(.nu-study-review>button,.nu-study-next button,.nu-study-actions>button:not(.beta-primary),.nu-settings-actions button,.nu-privacy-row>button){border:1px solid var(--beta-line);background:var(--beta-surface);padding:10px 14px;min-height:44px}.nu-study-resume{position:sticky;top:0;z-index:2}.nu-study-panel input:disabled,.nu-study-panel textarea:disabled{opacity:.65}
+html:not([data-neyvu-motion=reduce]) .beta-app :is(.beta-notice,.beta-student-memory>p[role=status]){animation:nu-panel-enter 260ms ease both}
+@media(prefers-reduced-motion:reduce){html:not([data-neyvu-motion=full]) .beta-app .nu-study-choices button[aria-pressed=true]{transform:none}}
+
+.nu-study-library{position:sticky;top:0;z-index:3;margin:12px 0 20px;border:1px solid var(--beta-line);border-radius:8px;background:var(--beta-paper);padding:12px 16px;max-height:45vh;overflow:auto}.nu-study-library>summary{min-height:44px;align-content:center;cursor:pointer;color:var(--beta-accent);font-size:14px}.beta-app .nu-study-library h2{font-size:14px;color:var(--beta-muted);margin:16px 0 8px}.nu-study-library section>div{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid var(--beta-line);padding:12px 0}.nu-study-library section>div>div{min-width:0}.nu-study-library strong{font-size:14px;line-height:1.5;display:block;overflow-wrap:anywhere}.nu-study-library small{display:block;color:var(--beta-muted);font-size:12px;line-height:1.6;margin-top:5px}.beta-app .nu-study-library button{flex-shrink:0;min-height:44px;border:1px solid var(--beta-line);background:var(--beta-surface);font-size:13px}.beta-app .nu-study-another{margin-top:24px;min-height:44px;color:var(--beta-accent);border:1px solid var(--beta-line)}
+@media(max-width:700px){.nu-study-library section>div{align-items:start;flex-direction:column;gap:10px}}
+
+.nu-study-library,.nu-study-panel{flex-shrink:0;width:100%}.nu-study-library[open]{max-height:45vh;overflow:auto}.beta-app .nu-study-goal{font-size:15px;line-height:1.6;margin:16px 0;max-width:65ch}
+
+.nu-onboarding{margin:18px 24px;padding:18px 20px;border:1px solid var(--beta-line);border-radius:12px;background:var(--beta-surface);color:var(--beta-ink);font-size:14px;line-height:1.6}.nu-onboarding summary{cursor:pointer;font-weight:600;min-height:44px;display:list-item}.nu-onboarding ol{padding-left:22px;display:grid;gap:12px}.nu-onboarding li{padding-left:4px}.nu-onboarding strong{display:block}.nu-onboarding .nu-setup-state{color:var(--beta-muted);font-size:12px}.beta-app .nu-onboarding button{font:inherit;min-height:44px;padding:6px 12px;border:1px solid var(--beta-line);border-radius:6px;background:var(--beta-paper);color:var(--beta-ink);cursor:pointer;margin:4px 8px 0 0}.nu-onboarding a{color:var(--beta-accent)}@media(max-width:640px){.nu-onboarding{margin:14px 16px;padding:14px}}
+
+/* Reading workspace: neutral selection; color belongs to actions and focus. */
+.beta-app .beta-nav nav a[aria-current]{color:var(--beta-accent);background:var(--beta-selected);box-shadow:none}
+.beta-app :is(.beta-view-switch button[aria-pressed=true],.nu-study-choices>button[aria-pressed=true]){color:var(--beta-ink);background:var(--beta-selected);border-color:var(--beta-muted);box-shadow:none;transform:none}
+.beta-app .beta-inline-citation{color:var(--beta-accent);background:transparent;border:0;text-decoration:underline;text-underline-offset:3px;font-size:.8em;padding:2px 4px}
+.beta-app .nu-study-library{position:static;flex-shrink:0;margin:0 0 20px;padding:4px 12px;background:var(--beta-surface)}
+.beta-app .nu-study-library>summary{color:var(--beta-ink);font-weight:500}
+.beta-messages{width:100%;max-width:76ch;margin-inline:auto}
+.beta-message-assistant{font-size:17px;line-height:1.75}
+.nu-answer-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 0 4px;margin-bottom:16px}
+.nu-answer-heading>span{color:var(--beta-muted);font-size:12px}
+.beta-message-user .nu-answer-heading{border:0;padding:0;margin-bottom:6px}
+.nu-answer-body{max-width:72ch;overflow-wrap:anywhere}
+.beta-app .nu-answer-body h2{font-size:22px;line-height:1.4;margin:28px 0 12px}
+.beta-app .nu-answer-body h3{font-size:18px;line-height:1.4}
+.beta-app .beta-message-assistant>details{background:transparent;border:0;border-top:1px solid var(--beta-line);border-radius:0;padding:6px 0}
+.beta-app .beta-message-assistant>details>summary{color:var(--beta-ink);font-size:14px;min-height:44px}
+.beta-app .nu-answer-footer{border:0;padding-top:8px;margin-top:8px}
+.nu-answer-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.beta-app .nu-answer-actions :is(button,a){font:inherit;font-size:14px;min-height:44px;border-radius:12px;padding:10px 14px;display:inline-flex;align-items:center;justify-content:center}
+.beta-app .nu-answer-actions button:not(.beta-primary){border:0;background:transparent;color:var(--beta-accent)}
+.beta-app .nu-answer-actions button:not(.beta-primary):hover{background:var(--beta-selected)}
+.beta-app .nu-answer-actions a{color:var(--beta-ink);text-decoration:underline;text-underline-offset:4px}
+.nu-answer-footer>small{display:block;font-size:12px;line-height:1.6;color:var(--beta-muted);margin-top:10px}
+.nu-copy-status{display:block;font-size:13px;color:var(--beta-ink);line-height:1.5}
+.nu-copy-status:not(:empty){margin-top:8px}
+.beta-app .beta-assistant-feedback{border:1px solid var(--beta-line);border-radius:9px;background:var(--beta-surface);padding:18px;max-width:76ch;width:100%;box-sizing:border-box;margin:8px auto 24px}
+.nu-answer-progress{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px;margin:18px 0 0;padding:16px 0;border-block:1px solid var(--beta-line);font-size:12px;color:var(--beta-muted)}
+.nu-answer-progress li{display:flex;gap:6px;align-items:center}
+.nu-answer-progress li[data-complete]{color:var(--beta-ink)}
+/* One writing surface: the outer curve carries focus, never an inner rectangle. */
+.beta-app .beta-composer{border:1px solid color-mix(in srgb,var(--beta-accent) 16%,var(--beta-line));border-radius:28px;max-width:76ch;width:100%;margin-inline:auto;background:var(--beta-surface);box-shadow:0 8px 28px var(--beta-shadow),0 2px 6px var(--beta-shadow);transition:border-color 180ms ease,box-shadow 180ms ease}
+.beta-app .beta-composer:focus-within{border-color:var(--beta-accent);outline:2px solid var(--beta-accent);outline-offset:0;box-shadow:0 0 0 4px color-mix(in srgb,var(--beta-cyan) 12%,transparent),0 12px 32px var(--beta-shadow)}
+.beta-app .beta-composer:has(textarea:focus-visible){border-color:transparent;outline:2px solid var(--beta-accent);outline-offset:0}
+.beta-app .beta-composer textarea{border-radius:16px;caret-color:var(--beta-accent);padding:14px 8px 8px 2px}
+.beta-app .beta-composer textarea:focus-visible{outline:none;box-shadow:none}
+.beta-app .beta-send{border-radius:18px;background:var(--beta-accent-solid);box-shadow:0 3px 10px color-mix(in srgb,var(--beta-accent) 24%,transparent)}
+.beta-app .beta-send:hover{background:color-mix(in srgb,var(--beta-accent-solid) 88%,var(--beta-ink))}
+.beta-app .beta-send:disabled{box-shadow:none}
+.beta-app .beta-nav nav a{border-radius:14px}
+.beta-app .beta-prompts button:nth-child(2) svg{color:var(--beta-accent)}
+.beta-app .beta-prompts button:nth-child(3) svg{color:var(--beta-cyan)}
+.beta-app .nu-answer-heading .nu-evidence-label{color:var(--beta-accent)}
+.beta-app .beta-message-assistant .nu-answer-heading>span:last-child{color:var(--beta-cyan)}
+@media(max-width:700px){.beta-app .beta-composer{border-radius:24px}.beta-app .beta-composer textarea{padding-top:12px}.beta-app .beta-send{border-radius:16px}}
+@media(forced-colors:active){.beta-app .beta-composer:focus-within{outline-color:Highlight}.beta-app .beta-composer{border-color:CanvasText}}
+.beta-composer-caption{max-width:76ch;width:100%;margin-inline:auto}
+.beta-app .nu-memory-link{color:var(--beta-cyan);font-size:12px;min-height:44px;flex-shrink:0;border-radius:12px;align-self:flex-start}
+.beta-app .beta-message-user{background:color-mix(in srgb,var(--beta-accent) 9%,var(--beta-surface));border-radius:24px 24px 8px 24px;border:0;padding:14px 18px;margin-bottom:28px}
+@keyframes nu-answer-arrive{from{opacity:.65;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+html:not([data-neyvu-motion=reduce]) .beta-message-assistant .nu-answer-heading{animation:nu-answer-arrive 180ms ease-out both}
+@media(prefers-reduced-motion:reduce){html:not([data-neyvu-motion=full]) .beta-message-assistant .nu-answer-heading{animation:none}}
+@media(max-width:700px){.nu-answer-heading{gap:12px;padding-bottom:12px;margin-bottom:18px}.nu-answer-heading>span{font-size:11px}.beta-app .nu-answer-actions{display:grid;grid-template-columns:1fr 1fr}.nu-answer-actions>.beta-primary{grid-column:1/-1}.beta-app .nu-answer-actions a{padding-inline:6px;font-size:13px}.beta-app .beta-assistant-feedback{padding:14px}.nu-answer-progress{flex-direction:column;gap:8px}.beta-app .nu-memory-link{min-height:44px}.beta-app .beta-message-user{max-width:100%}}
+.beta-app .nu-answer-heading{flex-direction:row;text-align:left;justify-content:space-between;align-items:center}
+.beta-app .nu-answer-heading .nu-evidence-label{text-align:left;margin:0}
+.beta-app .nu-account-menu>summary{color:var(--beta-ink)}
+
+/* Conversation remains mounted when its study workspace opens. */
+.nu-chat-view-switch{display:none}
+.nu-chat-workspace{display:flex;flex:1;min-height:0;gap:24px;width:100%}
+.nu-chat-study:empty{display:none}
+.nu-chat-workspace-study .beta-conversation{flex:1;min-width:0}
+.nu-chat-study{background:var(--beta-paper);color:var(--beta-ink);flex:1;min-width:0;max-width:560px;overflow:auto;overscroll-behavior:contain;border-left:1px solid var(--beta-line);padding:8px 0 20px 24px}
+.nu-chat-study .nu-study-panel{margin:0;max-width:none}
+.nu-chat-study .nu-study-choices{grid-template-columns:1fr}
+.nu-chat-study .nu-study-comparison{grid-template-columns:1fr}
+@media(max-width:900px){
+ .nu-chat-workspace-study{display:grid;grid-template-rows:auto minmax(0,1fr);grid-template-columns:minmax(0,1fr);gap:12px}
+ .nu-chat-workspace-study[data-mobile-view=study] .beta-conversation{display:none}
+ .nu-chat-workspace-study[data-mobile-view=conversation] .nu-chat-study{display:none}
+ .nu-chat-view-switch{display:flex;flex:0 0 100%;gap:4px;border-bottom:1px solid var(--beta-line)}
+ .beta-app .nu-chat-view-switch button{flex:1;min-height:44px;border-radius:0;color:var(--beta-muted);border-bottom:2px solid transparent}
+ .beta-app .nu-chat-view-switch button[aria-pressed=true]{color:var(--beta-ink);border-bottom-color:var(--beta-ink);font-weight:600}
+ .nu-chat-study{border-left:0;padding:8px 0 20px;max-width:none}
+}
+
+/* Reading hierarchy shared with the neutral Neyvy theme. */
+.beta-app .nu-study-library{background:transparent;border:0;border-bottom:1px solid var(--beta-line);border-radius:0;padding:4px 0;margin:0 0 12px}.beta-app .nu-study-library>summary{color:var(--beta-muted);font-weight:400}.beta-app .nu-background-progress>button{background:transparent;border:0;font-size:13px}
+
+.beta-app :is(.beta-composer textarea,.nu-answer-body)::selection{background:color-mix(in srgb,var(--beta-cyan) 24%,var(--beta-surface));color:var(--beta-ink)}
+
+/* Motion describes an actual pending state; it never represents a percentage. */
+.nu-activity-mark{position:relative;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;flex-shrink:0}
+.nu-activity-orbit{position:absolute;inset:0;border:1.5px solid var(--beta-line);border-top-color:var(--beta-accent);border-radius:50%;transform-origin:center}
+[data-active]>.nu-activity-mark .nu-activity-orbit,[data-active]>.beta-assistant-status-icon .nu-activity-orbit{animation:nu-activity-turn 2.4s linear infinite}
+[data-waiting]>.beta-assistant-status-icon .nu-activity-orbit{animation:nu-activity-wait 3.2s ease-in-out infinite}
+[data-motion-paused] .nu-activity-orbit{animation-play-state:paused!important}
+@keyframes nu-activity-turn{to{transform:rotate(360deg)}}
+@keyframes nu-activity-wait{0%,100%{opacity:.35}50%{opacity:1}}
+.beta-app .beta-assistant-status-copy{flex:1;min-width:0}
+.nu-answer-progress li[aria-current=step]{color:var(--beta-accent);font-weight:550}
+.nu-answer-progress li>span{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:18px;height:18px;border:1px solid var(--beta-line);border-radius:50%;font-size:12px}
+.nu-answer-progress li[data-complete]>span{border-color:var(--beta-muted)}
+.nu-progress-footer{display:flex;gap:8px 20px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;padding-top:10px}
+.beta-app .nu-progress-work p{font-size:12px;color:var(--beta-muted);margin:0 0 2px}
+.nu-progress-work>div{display:flex;gap:4px 12px;flex-wrap:wrap}
+.beta-app .nu-progress-work button,.beta-app .nu-progress-motion{font:inherit;font-size:12px;line-height:1.5;min-height:44px;padding:6px 0;border:0;border-radius:0;background:transparent;text-align:left;white-space:normal;color:var(--beta-accent);text-underline-offset:4px;text-decoration:underline}
+.beta-app .nu-progress-motion{color:var(--beta-muted);text-decoration:none}
+.nu-workspace-opening .nu-activity-mark{width:60px;height:60px;margin-bottom:22px}
+.beta-app .nu-opening-sections{list-style:none;padding:18px 0;margin:20px 0;display:flex;gap:12px 26px;flex-wrap:wrap;border-block:1px solid var(--beta-line);font-size:14px;color:var(--beta-ink)}
+.beta-app .nu-opening-context{max-width:48ch;font-size:13px;line-height:1.65}
+.nu-answer-recovery{border-left:2px solid var(--beta-warning-line);padding:12px 0 0 16px;margin:20px 0;font-size:14px}
+.beta-app .nu-answer-recovery p{font-size:14px;line-height:1.7;color:var(--beta-muted);margin:6px 0 12px;max-width:65ch}
+.nu-answer-recovery>div{display:flex;gap:8px 12px;flex-wrap:wrap}
+.beta-app .nu-answer-recovery button{border:1px solid var(--beta-line);background:var(--beta-surface);min-height:44px;font-size:13px;white-space:normal;text-align:left}
+.nu-answer-recovery small{display:block;font-size:12px;color:var(--beta-muted);line-height:1.6;margin-top:10px}
+html[data-neyvu-motion=reduce] .nu-progress-motion{display:none}
+@media(prefers-reduced-motion:reduce){html:not([data-neyvu-motion=full]) .nu-progress-motion{display:none}}
+@media(max-width:520px){.nu-answer-progress{grid-template-columns:minmax(0,1fr)}.nu-answer-recovery>div{flex-direction:column;align-items:flex-start}.nu-workspace-opening .nu-activity-mark{width:48px;height:48px}}
+
+/* Course evidence and purposeful inner-page tools share the existing palette. */
+.nu-course-context{border:1px solid var(--beta-line);border-radius:16px;padding:20px;margin:20px 0;background:var(--beta-surface);min-width:0}
+.nu-context-heading{display:flex;gap:20px;justify-content:space-between;align-items:start;flex-wrap:wrap}
+.nu-context-heading h2,.nu-course-context h2{font-size:1.05rem;margin:0 0 8px}
+.nu-context-heading p{margin:0;max-width:50ch}
+.nu-context-heading label,.nu-update-filters label{display:grid;gap:6px;min-width:0;max-width:100%;font-size:.85rem}
+.nu-context-heading select,.nu-update-filters select{max-width:100%;min-width:0;width:100%}
+.nu-context-heading label{flex:1 1 190px;max-width:320px}
+.nu-context-caption{font-size:.85rem;line-height:1.6;opacity:.8}
+.nu-context-passages{display:grid;gap:14px;max-height:540px;overflow:auto;overscroll-behavior:contain;padding-right:4px}
+.nu-context-passages article{border-top:1px solid var(--beta-line);padding-top:14px;min-width:0}
+.nu-context-passages article small{display:block;overflow-wrap:anywhere;margin-top:5px;line-height:1.5}
+.nu-context-category{font-weight:650}
+.nu-context-passages blockquote{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.9rem;line-height:1.65;margin:12px 0;padding-left:14px;border-left:2px solid var(--beta-accent)}
+.nu-context-loading{border-left:2px solid currentColor;padding-left:12px;animation:nu-context-pulse 1.8s ease-in-out infinite}
+.nu-context-journey{padding-left:22px;display:grid;gap:12px}
+.nu-context-journey p{margin:5px 0 0;line-height:1.6}
+.nu-note-starters,.nu-source-filters,.nu-update-filters{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:16px 0}
+.nu-note-starters>span{flex-basis:100%;font-size:.85rem;opacity:.8}
+.nu-source-filters button[aria-pressed=true]{background:var(--beta-selected);border-color:var(--beta-accent)}
+.nu-update-filters>label{flex:1 1 150px}
+.nu-update-filters .beta-check-label{display:flex;align-items:center;flex-basis:100%}
+.beta-extraction-progress>div{border-top:1px solid var(--beta-line);padding:12px 0;overflow-wrap:anywhere}
+.beta-event-office_hours{border-left:3px solid var(--beta-accent)}
+@keyframes nu-context-pulse{50%{opacity:.5}}
+@media(max-width:600px){.nu-course-context{padding:16px}.nu-context-heading{gap:14px}.nu-context-heading label{max-width:none;flex-basis:100%}.nu-note-starters button{flex:1 1 130px}.nu-context-passages{max-height:430px}}
+@media(prefers-reduced-motion:reduce){.nu-context-loading{animation:none}}
+
+.nu-source-study{border-bottom:1px solid var(--beta-line);padding:12px 0 20px;margin-bottom:16px}.nu-source-study h3{margin:0 0 8px}.nu-source-study p{font-size:.9rem;line-height:1.6}
+
+.nu-context-heading select,.nu-update-filters select{min-height:44px;border:1px solid var(--beta-line);border-radius:10px;background:var(--beta-surface);color:var(--beta-ink);font:inherit;padding:10px 12px}.nu-note-starters button,.nu-source-filters button{border:1px solid var(--beta-line);border-radius:999px;padding:10px 14px}.nu-calendar-context{margin:16px 0}.nu-calendar-context>summary{cursor:pointer;line-height:1.6}
+
+.nu-context-heading select:focus-visible,.nu-update-filters select:focus-visible,.nu-note-starters button:focus-visible,.nu-source-filters button:focus-visible{outline:2px solid var(--beta-accent);outline-offset:3px}
+
+.nu-feedback-short{display:none}@media(max-width:420px){.nu-feedback-long{display:none}.nu-feedback-short{display:inline}.beta-top-tools{gap:4px}.beta-top>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.nu-account-menu>summary{min-width:44px;justify-content:center}.nu-account-label{display:none}}
+/* Group clarification quick replies: one choice per group version. */
+.nu-group-clarification{margin-top:10px;display:grid;gap:6px}
+.nu-group-clarification-options{display:flex;flex-wrap:wrap;gap:8px}
+.beta-app .nu-group-clarification-options button{font:inherit;font-size:14px;min-height:44px;border-radius:999px;padding:8px 16px;border:1px solid var(--beta-accent);background:transparent;color:var(--beta-accent);cursor:pointer}
+.beta-app .nu-group-clarification-options button:disabled{opacity:.55;cursor:default}
+.nu-group-clarification-note{margin:0;font-size:13px;color:var(--beta-muted)}

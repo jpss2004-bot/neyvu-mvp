@@ -1,0 +1,8 @@
+{
+  "_note": "Prototype registry. Every connector reads synthetic fixtures; none of these origins is a real institution and no token here is a real credential.",
+  "connectors": [
+    {"id": "sample-moodle", "provider": "moodle", "fixture": "fixtures/moodle/companion-captures.json", "displayTimeZone": "America/Halifax"},
+    {"id": "sample-canvas", "provider": "canvas", "fixture": "fixtures/canvas/api-responses.json"},
+    {"id": "sample-brightspace", "provider": "brightspace", "fixture": "fixtures/brightspace/api-responses.json"}
+  ]
+}

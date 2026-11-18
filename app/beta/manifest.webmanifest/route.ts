@@ -1,0 +1,2 @@
+import {PRODUCT_NAME} from '../../../lib/brand';
+export function GET(){return Response.json({id:'/beta',name:PRODUCT_NAME,short_name:PRODUCT_NAME,start_url:'/beta',scope:'/beta',display:'standalone',background_color:'#0c1013',theme_color:'#0c1013',icons:[{src:'/brand/neyvu-icon-192.png',sizes:'192x192',type:'image/png',purpose:'any'},{src:'/brand/neyvu-icon-512.png',sizes:'512x512',type:'image/png',purpose:'any'}]});}

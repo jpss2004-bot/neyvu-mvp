@@ -1,0 +1,12 @@
+'use client';
+import {useEffect,useRef,useState} from 'react';
+import type {PlanningScope} from '../../lib/beta/planning-scope';
+import {useI18n} from './language';
+export default function PlanningCourses({courses,scope,onSave,onDirty}:{courses:{id:string;code:string;title?:string}[];scope?:PlanningScope;onSave:(input:unknown)=>Promise<any>;onDirty:(dirty:boolean)=>void}){
+ const {t}=useI18n(),[selected,setSelected]=useState<string[]>(scope?.confirmed?scope.course_ids:[]),[dirty,setDirty]=useState(false),[saving,setSaving]=useState(false),[error,setError]=useState('');
+ const request=useRef<{body:string;id:string}|null>(null);
+ useEffect(()=>{if(!dirty&&!saving)setSelected(scope?.confirmed?scope.course_ids:[]);},[scope?.revision,scope?.confirmed,dirty,saving]);
+ useEffect(()=>{onDirty(dirty||saving);return()=>onDirty(false);},[dirty,saving,onDirty]);
+ async function save(e:React.FormEvent){e.preventDefault();setSaving(true);setError('');const body={op:'planning.scope.save',revision:scope?.revision??null,course_ids:[...selected].sort()};const key=JSON.stringify(body);if(request.current?.body!==key)request.current={body:key,id:crypto.randomUUID()};try{await onSave({...body,request_id:request.current.id});setDirty(false);}catch(e){setError(e instanceof Error?e.message:'Your courses could not be saved. Your choices are kept.');}finally{setSaving(false);}}
+ return <details className="nu-planning-courses" open={!scope?.confirmed||undefined}><summary>{scope?.confirmed?t('Planning courses')+' · '+scope.course_ids.length:t('Choose the courses to include in your week')}</summary><p>{t('This selection controls Today and all-course planning answers. It does not verify enrollment, deadlines or submissions in Moodle.')}</p><form onSubmit={save}><fieldset disabled={saving}><legend>{t('Include in my planning')}</legend><div>{courses.map(c=><label key={c.id}><input type="checkbox" checked={selected.includes(c.id)} onChange={e=>{setSelected(ids=>e.target.checked?[...ids,c.id]:ids.filter(id=>id!==c.id));setDirty(true);}}/><span><strong>{c.code}</strong><small>{c.title!==c.code?c.title:''}</small></span></label>)}</div><button className="beta-primary" disabled={!selected.length||!dirty}>{saving?t('Saving courses…'):t('Use these courses')}</button>{dirty&&<button type="button" onClick={()=>{setDirty(false);setSelected(scope?.confirmed?scope.course_ids:[]);}}>{t('Cancel changes')}</button>}</fieldset>{error&&<p role="alert">{t(error)}</p>}</form></details>;
+}

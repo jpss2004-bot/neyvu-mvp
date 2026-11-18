@@ -1,0 +1,21 @@
+.beta-app .nu-day-schedule{margin:0 0 20px;min-width:0}
+.beta-app .nu-next-class{padding:18px 0;border-block:1px solid var(--beta-line);background:transparent}
+.beta-app .nu-next-class h3{font-size:13px;color:var(--beta-muted);font-weight:500;margin:0 0 12px;letter-spacing:0}
+.beta-app .nu-next-class strong{display:block;font-size:17px;line-height:1.5;overflow-wrap:anywhere}
+.beta-app .nu-next-class p{font-size:13px;color:var(--beta-muted);margin:5px 0;line-height:1.65}
+.beta-app .nu-next-class .nu-next-class-time{font-size:16px;color:var(--beta-ink);font-variant-numeric:tabular-nums}
+.beta-app .nu-next-class button{font-size:13px;padding:8px 0;justify-content:flex-start;text-decoration:underline;text-underline-offset:3px;color:var(--beta-accent)}
+.beta-app .nu-day-class-list{border:0;border-bottom:1px solid var(--beta-line);border-radius:0;margin:0;padding:0}
+.beta-app .nu-day-class-list summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;cursor:pointer;min-height:44px;font-size:14px}
+.beta-app .nu-day-class-list summary::after{content:'+';margin-left:auto}.beta-app .nu-day-class-list[open] summary::after{content:'−'}
+.beta-app .nu-day-class-list summary span{color:var(--beta-muted);font-variant-numeric:tabular-nums}
+.beta-app .nu-day-class-list ul{list-style:none;margin:0;padding:0}
+.beta-app .nu-day-class-list li button{display:grid;grid-template-columns:minmax(90px,auto) minmax(0,1fr);gap:16px;width:100%;padding:12px 0;text-align:left;justify-content:stretch;border-radius:0}
+.beta-app .nu-day-class-list li strong{display:block;font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+.beta-app .nu-day-class-list li small{display:block;font-size:12px;line-height:1.6;margin-top:4px;color:var(--beta-muted)}
+.beta-app .nu-day-meeting-time{font-size:13px;line-height:1.6;font-variant-numeric:tabular-nums}
+.beta-app .nu-day-class-list>p,.beta-app .nu-day-schedule-scope{font-size:12px;line-height:1.7;color:var(--beta-muted);margin:12px 0 0}
+.beta-app .nu-work-status{display:block;font-size:12px;line-height:1.5;overflow-wrap:anywhere;margin-top:6px;color:var(--beta-ink)}
+.beta-app .nu-work-status[data-state=submitted],.beta-app .nu-work-status[data-state=attempt_finished]{color:var(--beta-success)}
+.beta-app .nu-work-status[data-state=check_status],.beta-app .nu-work-status[data-state=submit_late],.beta-app .nu-work-status[data-state=missed]{color:var(--beta-warning-text)}
+@media(max-width:700px){.beta-app .nu-day-class-list li button{grid-template-columns:1fr;gap:4px}}

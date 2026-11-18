@@ -1,0 +1,69 @@
+/* Neyvu Study Desk tokens. Brand values come from public/brand/neyvu-symbol*.svg. */
+.beta-app.nu-study-desk,
+.next-due-theme {
+  --desk-font: "Neyvu Geist", system-ui, sans-serif;
+  --desk-meta: 12px;
+  --desk-control: 13px;
+  --desk-ui: 15px;
+  --desk-reading: 16px;
+  --desk-reading-line: 1.6;
+  --desk-panel-title: 24px;
+  --desk-page-title: clamp(28px, 3vw, 34px);
+  --desk-control-radius: 6px;
+  --desk-surface-radius: 5px;
+  --desk-logo-cobalt: #2457cc;
+  --desk-logo-sky: #42a4ed;
+  --desk-logo-teal: #195b65;
+  --desk-rail: #252726;
+  --desk-rail-active: #444744;
+  --desk-rail-ink: #f5f4ef;
+  --desk-rail-muted: #c1c3bc;
+  --desk-rail-line: #50534d;
+  --desk-rail-indicator: #f5f4ef;
+
+  --desk-canvas: #222421;
+  --desk-surface: #2b2e29;
+  --desk-evidence-surface: #293330;
+  --desk-ink: #f1f0ea;
+  --desk-muted: #bfc3b9;
+  --desk-rule: #484d43;
+  --desk-action: #a4bdff;
+  --desk-on-action: #10213e;
+  --desk-selection: #343c45;
+  --desk-evidence: #73c6c8;
+  --desk-uncertain: #f2d59e;
+  --desk-uncertain-surface: #463721;
+}
+html[data-schoolvault-theme="light"] .beta-app.nu-study-desk,
+.next-due-theme {
+  --desk-canvas: #faf8f3;
+  --desk-surface: #fff;
+  --desk-evidence-surface: #edf5f6;
+  --desk-ink: #252824;
+  --desk-muted: #60675e;
+  --desk-rule: #dcded5;
+  --desk-action: var(--desk-logo-cobalt);
+  --desk-on-action: #fff;
+  --desk-selection: #eceff4;
+  --desk-evidence: var(--desk-logo-teal);
+  --desk-uncertain: #714718;
+  --desk-uncertain-surface: #f9eed8;
+}
+html .beta-app.nu-study-desk {
+  --beta-ink: var(--desk-ink);
+  --beta-muted: var(--desk-muted);
+  --beta-paper: var(--desk-canvas);
+  --beta-surface: var(--desk-surface);
+  --beta-line: var(--desk-rule);
+  --beta-accent: var(--desk-action);
+  --beta-accent-solid: var(--desk-action);
+  --beta-on-accent: var(--desk-on-action);
+  --beta-selected: var(--desk-selection);
+  --beta-warning-text: var(--desk-uncertain);
+  --beta-warning-surface: var(--desk-uncertain-surface);
+  font-family: var(--desk-font);
+}
+html[data-neyvu-contrast="high"] .beta-app.nu-study-desk {
+  --desk-rule: var(--desk-muted);
+  --desk-rail-line: var(--desk-rail-muted);
+}

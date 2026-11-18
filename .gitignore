@@ -1,0 +1,11 @@
+node_modules
+.next/
+.env*
+!.env.example
+*.private.json
+__pycache__/
+*.pyc
+test-results/
+tsconfig.tsbuildinfo
+.venv/
+ai-eval/results/

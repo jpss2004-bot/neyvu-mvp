@@ -1,0 +1,107 @@
+{
+ "_note": "Synthetic records (Synthetic University) in the shape of the Neyvu Companion's page-capture records (course, identity, title, url, body, assessment?, captured_at, coverage). No real Moodle site, student or course. Two captures of assignment 901 show that the newest wins.",
+ "expectedIdentity": "moodle-user:52",
+ "captures": [
+  {
+   "course": {
+    "id": "42",
+    "title": "General Chemistry I (sample)",
+    "url": "https://moodle.example.com/course/view.php?id=42",
+    "shortname": "DEMO 1020"
+   },
+   "identity": "moodle-user:52 · Sample Learner",
+   "title": "General Chemistry I (sample)",
+   "url": "https://moodle.example.com/course/view.php?id=42",
+   "body": "Week 10\nLab 6: Titration\nProblem set 7\nAnnouncements",
+   "captured_at": "2026-11-10T13:05:00.000Z",
+   "coverage": {
+    "scope": "visible-course",
+    "files": [
+     {
+      "url": "https://moodle.example.com/pluginfile.php/811/mod_resource/content/1/Lab6-handout.pdf",
+      "title": "Lab 6 handout"
+     }
+    ],
+    "files_truncated": false,
+    "issues": [
+     "Some course sections are collapsed."
+    ]
+   }
+  },
+  {
+   "course": {
+    "id": "42",
+    "title": "General Chemistry I (sample)",
+    "url": "https://moodle.example.com/course/view.php?id=42",
+    "shortname": "DEMO 1020"
+   },
+   "identity": "moodle-user:52 · Sample Learner",
+   "title": "Problem set 7",
+   "url": "https://moodle.example.com/mod/assign/view.php?id=901",
+   "body": "Problem set 7\nOpened: Monday, 3 November 2026, 12:00 AM\nDue: Friday, 14 November 2026, 11:59 PM\nAnswer questions 7.1–7.18. Show units.",
+   "assessment": {
+    "kind": "assignment",
+    "layout": "standard",
+    "rows": [
+     {
+      "label": "Submission status",
+      "value": "No attempt",
+      "classes": []
+     }
+    ],
+    "attempts": [],
+    "truncated": false
+   },
+   "captured_at": "2026-11-10T13:06:00.000Z",
+   "coverage": {
+    "scope": "visible-activity",
+    "files": [],
+    "files_truncated": false,
+    "issues": []
+   }
+  },
+  {
+   "course": {
+    "id": "42",
+    "title": "General Chemistry I (sample)",
+    "url": "https://moodle.example.com/course/view.php?id=42",
+    "shortname": "DEMO 1020"
+   },
+   "identity": "moodle-user:52 · Sample Learner",
+   "title": "Problem set 7",
+   "url": "https://moodle.example.com/mod/assign/view.php?id=901",
+   "body": "(older capture) Due: Friday, 14 November 2026, 5:00 PM",
+   "captured_at": "2026-11-08T09:00:00.000Z",
+   "coverage": {
+    "scope": "visible-activity",
+    "files": [],
+    "files_truncated": false,
+    "issues": []
+   }
+  },
+  {
+   "course": {
+    "id": "42",
+    "title": "General Chemistry I (sample)",
+    "url": "https://moodle.example.com/course/view.php?id=42",
+    "shortname": "DEMO 1020"
+   },
+   "identity": "moodle-user:52 · Sample Learner",
+   "title": "Lab 6: Titration",
+   "url": "https://moodle.example.com/mod/page/view.php?id=902",
+   "body": "Lab 6: Titration\nPre-lab questions are due at the start of lab. Wear goggles.",
+   "captured_at": "2026-11-10T13:07:00.000Z",
+   "coverage": {
+    "scope": "visible-activity",
+    "files": [
+     {
+      "url": "https://moodle.example.com/pluginfile.php/811/mod_resource/content/1/Lab6-handout.pdf",
+      "title": "Lab 6 handout"
+     }
+    ],
+    "files_truncated": false,
+    "issues": []
+   }
+  }
+ ]
+}

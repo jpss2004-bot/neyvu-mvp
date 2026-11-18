@@ -1,0 +1,196 @@
+{
+ "_note": "Synthetic Moodle mobile web-service responses (Synthetic University). No real site, learner, course or credential. The token and login below are fixture values only.",
+ "site": "https://moodle.example.edu/",
+ "token": "f1x7ure0000token0000aaaa1111bbbb",
+ "login": {
+  "username": "sample.learner",
+  "password": "fixture-only"
+ },
+ "publicConfig": {
+  "sitename": "Synthetic University Moodle",
+  "typeoflogin": 2,
+  "launchurl": "https://moodle.example.edu/admin/tool/mobile/launch.php",
+  "enablemobilewebservice": 1
+ },
+ "functions": {
+  "core_webservice_get_site_info": {
+   "default": {
+    "userid": 52,
+    "sitename": "Synthetic University Moodle",
+    "username": "sample.learner",
+    "release": "4.5"
+   }
+  },
+  "core_enrol_get_users_courses": {
+   "userid=52": [
+    {
+     "id": 42,
+     "shortname": "DEMO 1020",
+     "fullname": "General Chemistry I (sample)",
+     "visible": 1,
+     "timemodified": 1794200000
+    },
+    {
+     "id": 43,
+     "shortname": "DEMO 2210",
+     "fullname": "Statistics for Science (sample)",
+     "visible": 1,
+     "timemodified": 1794100000
+    }
+   ]
+  },
+  "core_course_get_contents": {
+   "courseid=42": [
+    {
+     "id": 1,
+     "name": "Week 10",
+     "modules": [
+      {
+       "id": 811,
+       "name": "Lab 6 handout",
+       "modname": "resource",
+       "url": "https://moodle.example.edu/mod/resource/view.php?id=811",
+       "uservisible": true,
+       "contents": [
+        {
+         "type": "file",
+         "filename": "Lab6-handout.pdf",
+         "fileurl": "https://moodle.example.edu/webservice/pluginfile.php/811/mod_resource/content/1/Lab6-handout.pdf",
+         "filesize": 64,
+         "mimetype": "application/pdf",
+         "timemodified": 1794300000
+        }
+       ]
+      },
+      {
+       "id": 812,
+       "name": "Week 10 reading guide",
+       "modname": "page",
+       "url": "https://moodle.example.edu/mod/page/view.php?id=812",
+       "uservisible": true,
+       "contents": [
+        {
+         "type": "file",
+         "filename": "index.html",
+         "fileurl": "https://moodle.example.edu/webservice/pluginfile.php/812/mod_page/content/3/index.html",
+         "filesize": 80,
+         "mimetype": "text/html",
+         "timemodified": 1794300100
+        }
+       ]
+      },
+      {
+       "id": 901,
+       "name": "Problem set 7",
+       "modname": "assign",
+       "url": "https://moodle.example.edu/mod/assign/view.php?id=901",
+       "uservisible": true,
+       "description": "<p>Answer questions 1-6. Show units.</p>"
+      },
+      {
+       "id": 905,
+       "name": "Simulator link",
+       "modname": "url",
+       "url": "https://moodle.example.edu/mod/url/view.php?id=905",
+       "uservisible": true,
+       "contents": [
+        {
+         "type": "url",
+         "fileurl": "https://phet.example.org/titration"
+        }
+       ]
+      },
+      {
+       "id": 906,
+       "name": "Hidden quiz",
+       "modname": "quiz",
+       "url": "https://moodle.example.edu/mod/quiz/view.php?id=906",
+       "uservisible": false
+      }
+     ]
+    }
+   ],
+   "courseid=43": [
+    {
+     "id": 2,
+     "name": "Topic 1",
+     "modules": []
+    }
+   ]
+  },
+  "mod_assign_get_assignments": {
+   "courseids[0]=42": {
+    "courses": [
+     {
+      "id": 42,
+      "assignments": [
+       {
+        "id": 71,
+        "cmid": 901,
+        "name": "Problem set 7",
+        "duedate": 1794715140,
+        "intro": "<p>Answer questions 1-6.</p>",
+        "timemodified": 1794300200
+       }
+      ]
+     }
+    ],
+    "warnings": []
+   },
+   "courseids[0]=43": {
+    "courses": [
+     {
+      "id": 43,
+      "assignments": []
+     }
+    ],
+    "warnings": []
+   }
+  },
+  "core_calendar_get_calendar_events": {
+   "events[courseids][0]=42": {
+    "events": [
+     {
+      "id": 5001,
+      "name": "Lab 6 (Section Alpha)",
+      "courseid": 42,
+      "eventtype": "course",
+      "timestart": 1794582000,
+      "timeduration": 10800,
+      "timemodified": 1794300300
+     }
+    ],
+    "warnings": []
+   },
+   "events[courseids][0]=43": {
+    "events": [],
+    "warnings": []
+   }
+  },
+  "core_group_get_course_user_groups": {
+   "courseid=42": {
+    "groups": [
+     {
+      "id": 3001,
+      "name": "Lab Section Alpha"
+     }
+    ],
+    "warnings": []
+   },
+   "courseid=43": {
+    "groups": [],
+    "warnings": []
+   }
+  }
+ },
+ "files": {
+  "/webservice/pluginfile.php/811/mod_resource/content/1/Lab6-handout.pdf": {
+   "mime": "application/pdf",
+   "text": "%PDF-1.4\n% synthetic fixture, not a real PDF body\n%%EOF\n"
+  },
+  "/webservice/pluginfile.php/812/mod_page/content/3/index.html": {
+   "mime": "text/html",
+   "text": "<h2>Week 10</h2><p>Read chapter 9 before the lab.</p>"
+  }
+ }
+}

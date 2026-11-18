@@ -1,0 +1,71 @@
+{
+  "name": "schoolvault-desktop",
+  "version": "0.3.13",
+  "private": true,
+  "description": "Neyvu Acadia Moodle companion",
+  "author": "Neyvu",
+  "main": "main.cjs",
+  "scripts": {
+    "build:windows": "electron-builder --win nsis --x64 --publish never",
+    "build:mac": "node build-mac.cjs",
+    "test": "node --test handoff.test.mjs engine.test.mjs connector-recovery.test.mjs course-membership.test.mjs collection-navigation.test.mjs capture.test.mjs receipt-capture.test.mjs preflight.test.mjs store-config.test.mjs package-integrity.test.mjs usb-launcher.test.mjs course-list.test.mjs generic-courses.test.mjs course-selection-renderer.test.mjs collection-plan.test.mjs attachment-read.test.mjs collection-progress.test.mjs collection-memory.test.mjs window-lifecycle.test.cjs connection-storage.test.cjs",
+    "build:store": "node build-store.cjs"
+  },
+  "dependencies": {
+    "playwright-core": "1.63.0"
+  },
+  "devDependencies": {
+    "electron": "44.5.1",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "afterPack": "./package-integrity.cjs",
+    "appId": "app.schoolvault.companion",
+    "productName": "Neyvu Companion",
+    "asar": true,
+    "files": [
+      "main.cjs",
+      "window-lifecycle.cjs",
+      "connection-storage.cjs",
+      "preload.cjs",
+      "engine.mjs",
+      "course-membership.mjs",
+      "handoff.mjs",
+      "capture.mjs",
+      "collection-plan.mjs",
+      "collection-memory.mjs",
+      "collection-navigation.mjs",
+      "attachment-read.mjs",
+      "content-packet.mjs",
+      "content-upload.mjs",
+      "content-journal.mjs",
+      "content-collector.mjs",
+      "native-pdf-reader.mjs",
+      "native-package.mjs",
+      "original-recovery.mjs",
+      "native-reader.json",
+      "preflight.mjs",
+      "protocol.mjs",
+      "integrity.json",
+      "ui/**",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "artifactName": "Neyvu-Setup-${version}-${arch}.exe",
+      "signAndEditExecutable": true,
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": false,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true,
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false
+    }
+  }
+}

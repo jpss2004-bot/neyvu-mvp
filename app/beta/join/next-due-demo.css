@@ -1,0 +1,60 @@
+.sv-constellation .next-due-hero,
+.sv-constellation .next-due-section {
+ font-family: var(--desk-font);
+ color: var(--desk-ink);
+}
+
+.sv-constellation.daylight .hero-conversation.next-due-hero {
+ transform: none;
+ border: 1px solid var(--desk-rule);
+ border-radius: var(--desk-surface-radius);
+ background: var(--desk-surface);
+}
+
+.next-due-teaser { padding: 16px 18px; font-size: 13px; line-height: 1.5; }
+.next-due-bar { display: flex; align-items: center; gap: 9px; font-size: 14px; }
+.next-due-bar img { flex: none; }
+.next-due-bar > span { margin-left: auto; color: var(--desk-muted); font-size: 12px; text-align: right; }
+.next-due-teaser > p { margin: 10px 0; font-size: 16px; line-height: 1.25; font-weight: 640; }
+.next-due-teaser ul { list-style: none; margin: 0 0 10px; padding: 0; }
+.next-due-teaser li { display: flex; justify-content: space-between; gap: 10px; border-top: 1px solid var(--desk-rule); padding: 6px 0; }
+.next-due-teaser li span { color: var(--desk-muted); text-align: right; }
+.next-due-teaser a { color: var(--desk-action); text-decoration: underline; text-underline-offset: 3px; font-weight: 620; }
+
+.next-due-section { background: var(--desk-canvas); padding: clamp(45px, 8vw, 106px) 0; scroll-margin-top: 72px; }
+.next-due-layout { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); align-items: start; gap: clamp(24px, 5vw, 76px); }
+.next-due-intro h2 { font-size: clamp(29px, 4vw, 49px); line-height: 1.05; letter-spacing: -.045em; margin: 0 0 17px; }
+.next-due-intro p { margin: 0 0 14px; max-width: 39ch; font-size: 16px; line-height: 1.6; }
+.next-due-intro .next-due-disclosure { color: var(--desk-muted); font-size: 13px; }
+.next-due-desk { background: var(--desk-surface); border: 1px solid var(--desk-rule); border-radius: var(--desk-surface-radius); min-width: 0; }
+.next-due-desk > .next-due-bar { padding: 12px clamp(12px, 3vw, 22px); border-bottom: 1px solid var(--desk-rule); }
+.next-due-transcript { padding: clamp(12px, 3vw, 22px); font-size: 15px; line-height: 1.5; }
+.next-due-question { background: var(--desk-selection); margin: 0 0 14px auto; width: fit-content; max-width: 100%; padding: 9px 13px; border-radius: 9px; }
+.next-due-answer { margin: 0; padding: 0; list-style: none; }
+.next-due-answer li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 14px; align-items: start; padding: 13px 0; border-bottom: 1px solid var(--desk-rule); }
+.next-due-desk h3 { margin: 0; font-size: 15px; line-height: 1.45; }
+.next-due-answer p, .next-due-plan p { margin: 3px 0 0; font-size: 13px; overflow-wrap: anywhere; }
+.next-due-answer p:first-of-type { color: var(--desk-muted); }
+.sv-constellation .next-due-warning { color: var(--desk-uncertain); }
+.next-due-desk button, .next-due-desk input { font: inherit; font-size: 13px; color: inherit; border: 1px solid var(--desk-rule); border-radius: var(--desk-control-radius); background: white; padding: 8px 10px; }
+.next-due-desk button { cursor: pointer; }
+.next-due-desk button:hover { border-color: var(--desk-action); }
+.next-due-desk button:disabled { opacity: .65; cursor: default; }
+.next-due-desk .next-due-primary { color: white; border-color: var(--desk-action); background: var(--desk-action); }
+.next-due-desk .next-due-source-button { color: var(--desk-evidence); text-align: left; }
+.next-due-evidence { margin-top: 12px; padding: 11px 12px; background: var(--desk-evidence-surface); border-left: 3px solid var(--desk-evidence); }
+.next-due-evidence > div { display: flex; align-items: start; justify-content: space-between; gap: 8px; }
+.next-due-evidence blockquote { margin: 8px 0 0; color: var(--desk-evidence); }
+.next-due-plan { margin-top: 13px; }
+.next-due-plan label { display: block; font-weight: 650; }
+.next-due-plan input { width: 100%; margin: 5px 0 8px; }
+.next-due-plan form > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.next-due-teaser a:focus-visible, .next-due-desk :is(button,input):focus-visible { outline: 2px solid var(--desk-action); outline-offset: 3px; }
+
+@media (max-width: 760px) {
+ .next-due-layout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 500px) {
+ .next-due-answer li { grid-template-columns: minmax(0, 1fr); }
+ .next-due-source-button { justify-self: start; }
+}

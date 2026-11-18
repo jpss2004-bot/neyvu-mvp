@@ -1,0 +1,35 @@
+/* "Context layer for learning" sections: how it works, today, proof, institutions, direction. */
+.sv-constellation .ctx-section{padding:clamp(56px,8vw,104px) 0;border-top:1px solid var(--key-07);background:var(--canvas)}
+.sv-constellation .ctx-today,.sv-constellation .ctx-institutions{background:var(--canvas-raise)}
+.sv-constellation .ctx-kicker{font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--key);margin-bottom:14px}
+.sv-constellation .ctx-intro{margin-top:16px;color:var(--text-2);max-width:46em;font-size:clamp(16px,1.3vw,18px);line-height:1.7}
+.sv-constellation .ctx-flow,.sv-constellation .ctx-cards,.sv-constellation .ctx-list{list-style:none;padding:0;margin:clamp(28px,4vw,44px) 0 0}
+.sv-constellation .ctx-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,28px)}
+.sv-constellation .ctx-flow li,.sv-constellation .ctx-cards li{padding:24px 22px;border:1px solid var(--key-12);border-radius:14px;background:var(--canvas-raise)}
+.sv-constellation .ctx-today .ctx-cards li,.sv-constellation .ctx-institutions .ctx-list li{background:var(--canvas)}
+.sv-constellation .ctx-step{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--key);color:var(--on-key);font-size:14px;font-weight:650;margin-bottom:14px}
+.sv-constellation .ctx-section h3{font-size:18px;font-weight:620;letter-spacing:-.01em;line-height:1.3;margin-bottom:8px;color:var(--text)}
+.sv-constellation .ctx-section li p{color:var(--text-2);font-size:15px;line-height:1.7}
+.sv-constellation .ctx-section li a{color:var(--key);text-decoration:underline;text-underline-offset:.18em}
+.sv-constellation .ctx-tag{display:inline-block;margin-left:8px;padding:2px 9px;border-radius:999px;border:1px solid var(--key-22);color:var(--key);font-size:12px;font-weight:600;white-space:nowrap}
+.sv-constellation .ctx-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.sv-constellation .ctx-roadmap li{border-style:dashed}
+.sv-constellation .ctx-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:clamp(28px,4vw,44px) 0 0}
+.sv-constellation .ctx-stats div{display:flex;flex-direction:column-reverse;gap:8px;padding:26px 22px;border-top:2px solid var(--key)}
+.sv-constellation .ctx-stats dd{margin:0;font-size:clamp(40px,5vw,60px);font-weight:650;letter-spacing:-.04em;line-height:1;color:var(--text)}
+.sv-constellation .ctx-stats dt{color:var(--text-2);font-size:15px;line-height:1.5}
+.sv-constellation .ctx-note{margin-top:20px;color:var(--text-3);font-size:14px;line-height:1.7;max-width:60em}
+.sv-constellation .ctx-split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:start}
+.sv-constellation .ctx-list{display:grid;gap:14px;margin-top:0}
+.sv-constellation .ctx-list li{padding:20px 22px;border:1px solid var(--key-12);border-radius:14px}
+.sv-constellation .ctx-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.sv-constellation .ctx-actions .btn{text-align:center}
+@media(max-width:900px){
+ .sv-constellation .ctx-flow,.sv-constellation .ctx-cards,.sv-constellation .ctx-split{grid-template-columns:minmax(0,1fr)}
+ .sv-constellation .top-nav .nav-institutions{display:none}
+}
+@media(max-width:560px){
+ .sv-constellation .ctx-stats{grid-template-columns:minmax(0,1fr);gap:4px}
+ .sv-constellation .ctx-stats div{padding:18px 4px}
+ .sv-constellation .ctx-actions .btn{flex:1 1 100%}
+}

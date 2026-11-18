@@ -1,0 +1,28 @@
+/* Shared screen surfaces; public marketing keeps its authored composition. */
+:root{--nu-canvas:#101117;--nu-paper:#1c1e27;--nu-ink:#f0f1f7;--nu-muted:#acb1c0;--nu-rule:#363946;--nu-action:#9daeff;--nu-on-action:#17214b}
+html[data-schoolvault-theme="light"]{--nu-canvas:#f5f6fa;--nu-paper:#fff;--nu-ink:#181b25;--nu-muted:#646b7d;--nu-rule:#dce0e9;--nu-action:#2457cc;--nu-on-action:#fff}
+.sv-admin-page.sv-admin-page,.public-document.public-document{background:var(--nu-canvas);color:var(--nu-ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI Variable","Segoe UI",sans-serif;line-height:1.7;min-height:100dvh;padding-inline:24px;--sv-muted:var(--nu-muted);--sv-border:var(--nu-rule)}
+.sv-admin-page :is(.sv-admin-login,.sv-privacy){max-width:680px;margin:60px auto}
+.sv-admin-page :is(.sv-admin-login,.sv-privacy) h1{font-size:clamp(30px,4vw,42px);line-height:1.2;letter-spacing:-.025em}
+.sv-admin-page :is(.sv-admin-login,.sv-privacy) p,.public-document.public-document p{color:var(--nu-muted)}
+.sv-admin-page.sv-admin-page .sv-name{color:var(--nu-ink)}
+.sv-admin-page.sv-admin-page :is(a,.sv-text-link),.public-document.public-document a{color:var(--nu-action)}
+.sv-admin-page.sv-admin-page .sv-button{background:var(--nu-action);color:var(--nu-on-action)!important;border:1px solid var(--nu-action);border-radius:10px;box-shadow:none;min-height:44px;padding:10px 18px;transform:none;font-size:14px}
+.sv-admin-page.sv-admin-page .sv-secondary{background:transparent;color:var(--nu-action)!important}
+.sv-admin-page.sv-admin-page :is(input,select,textarea){background:var(--nu-paper);color:var(--nu-ink);border:1px solid var(--nu-rule);border-radius:8px;min-height:44px;font:inherit}
+.public-document.public-document :is(header,footer){border-color:var(--nu-rule);background:var(--nu-canvas)}
+.public-document.public-document :is(h1,h2){color:var(--nu-ink)}
+.public-document.public-document :is(.public-document-index,.public-document-contact){background:var(--nu-paper);border-color:var(--nu-rule)}
+.sv-admin-page :focus-visible,.public-document :focus-visible{outline:2px solid var(--nu-action);outline-offset:4px}
+.nu-missing-page{display:grid;place-items:center;min-height:100dvh;background:var(--nu-canvas);color:var(--nu-ink);padding:28px;font:16px/1.7 system-ui}
+.nu-missing-page section{max-width:520px}.nu-missing-page h1{font-size:36px;letter-spacing:-.03em;line-height:1.2}.nu-missing-page p{color:var(--nu-muted)}.nu-missing-page a{display:inline-flex;align-items:center;min-height:44px;padding:10px 18px;border-radius:10px;color:var(--nu-on-action);background:var(--nu-action);text-decoration:none}.nu-missing-page a:focus-visible{outline:2px solid var(--nu-action);outline-offset:4px}
+@media screen{.study-copy-shell.study-copy-shell{background:var(--nu-canvas);color:var(--nu-ink)}.study-copy-shell .study-print-action p{color:var(--nu-muted)}.study-copy-shell .study-copy-paper{background:#fff;color:#111827;border-color:var(--nu-rule)}.study-copy-shell .study-print-button,.study-copy-shell .study-copy-toolbar button{min-height:44px;padding:10px 16px;border:1px solid var(--nu-rule);background:var(--nu-paper);color:var(--nu-ink);border-radius:10px;font:inherit;cursor:pointer}.study-copy-shell .study-copy-toolbar a{color:var(--nu-action);min-height:44px;display:inline-flex;align-items:center}}
+@media(max-width:600px){.sv-admin-page.sv-admin-page,.public-document.public-document{padding-inline:18px}.sv-admin-page :is(.sv-admin-login,.sv-privacy){margin:36px auto}.sv-admin-page .sv-admin-header{gap:14px}.sv-admin-page .sv-name{font-size:22px}}
+html[data-neyvu-motion="reduce"] .sv-constellation *,html[data-neyvu-motion="reduce"] .sv-constellation *::before,html[data-neyvu-motion="reduce"] .sv-constellation *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.public-document.public-document a:hover{color:var(--nu-ink)}
+.public-document.public-document .nu-language{color:var(--nu-muted)}
+.public-document.public-document .nu-language select{background:var(--nu-paper);color:var(--nu-ink);border-color:var(--nu-rule)}
+
+.public-document.public-document .nu-legal-wordmark-light{display:none}
+html[data-schoolvault-theme="light"] .public-document .nu-legal-wordmark-dark{display:none}
+html[data-schoolvault-theme="light"] .public-document .nu-legal-wordmark-light{display:block}
