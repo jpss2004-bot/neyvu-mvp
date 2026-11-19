@@ -115,6 +115,10 @@ The 150-question bank comes from real courses, so it stays private. The guard co
 | `ai-eval/` | Evaluation harness and the synthetic adversarial set |
 | `public/` | Static assets, brand files, citation styles and their licences |
 
+## Try it live
+
+The service runs at https://schoolvault-beta-web.onrender.com/beta. Challenge judges can open "Reviewer demo access" on that page with the code in our submission. The demo account holds only fictional courses (DEMO 1010 and DEMO 2020).
+
 ## Tests
 
 The product has 740 automated unit tests plus Python worker, guard and integration suites. They live in the private repository and are **not** in this public snapshot: many of their fixtures were built from real course material (timetables, syllabi, announcements, office hours) during the Acadia pilot, and replacing every one by hand could not be verified in time. This snapshot is the application code only.
