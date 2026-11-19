@@ -119,7 +119,7 @@ The 150-question bank comes from real courses, so it stays private. The guard co
 
 The service runs at https://schoolvault-beta-web.onrender.com/beta. Challenge judges can open "Reviewer demo access" on that page with the code in our submission. The demo account holds only fictional courses (DEMO 1010 and DEMO 2020).
 
-The 10-slide challenge deck: https://claude.ai/artifact/H9rqjfYMByj7WbWpLsWx41
+The 10-slide challenge deck: [docs/Neyvu challenge deck.pdf](docs/Neyvu%20challenge%20deck.pdf)
 
 ## Tests
 
