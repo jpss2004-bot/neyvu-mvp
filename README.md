@@ -119,6 +119,8 @@ The 150-question bank comes from real courses, so it stays private. The guard co
 
 The service runs at https://schoolvault-beta-web.onrender.com/beta. Challenge judges can open "Reviewer demo access" on that page with the code in our submission. The demo account holds only fictional courses (DEMO 1010 and DEMO 2020).
 
+The 10-slide challenge deck: https://claude.ai/artifact/H9rqjfYMByj7WbWpLsWx41
+
 ## Tests
 
 The product has 740 automated unit tests plus Python worker, guard and integration suites. They live in the private repository and are **not** in this public snapshot: many of their fixtures were built from real course material (timetables, syllabi, announcements, office hours) during the Acadia pilot, and replacing every one by hand could not be verified in time. This snapshot is the application code only.
